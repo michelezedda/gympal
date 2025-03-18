@@ -18,12 +18,12 @@ function Hero() {
             <br />
             ELEVATE YOUR SOUL
           </h1>
-          <div className="flex mt-10 gap-6">
-            <button className="py-2 px-6 rounded-full bg-neutral-800 hover:bg-lime-700 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer">
+          <div className="flex mt-10 gap-6 font-semibold">
+            <button className="py-2 px-6 rounded-full bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer">
               OUR CLASSES
             </button>
             <button
-              className="py-2 px-3 rounded-full bg-neutral-800 hover:bg-lime-700 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer"
+              className="py-2 px-3 rounded-full bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer"
               onClick={handleClick}
             >
               <MdOutlineSlowMotionVideo size="30" />
