@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-around bg-black p-4 text-neutral-400">
+      <div className="w-full flex flex-col lg:flex-row justify-around bg-black p-4 text-neutral-400">
         <div className="flex flex-col items-start gap-2">
           <div className="flex gap-1 items-center">
             <img src="/media/logo.png" alt="GymPal logo" className="h-14" />
@@ -12,10 +12,9 @@ function Footer() {
           <div className="flex">
             <p>
               Take your health and body to the next level with our comprehensive
-              designed to help you reach your fitness goal
+              program designed to help you reach your fitness goals.
             </p>
           </div>
-          <div className="flex"></div>
           <div className="flex items-center">
             Privacy Policy <hr className="h-6 border-1 mx-2" />
             {new Date().getFullYear()} &#169; GymPal
@@ -23,7 +22,7 @@ function Footer() {
         </div>
         <div className="flex flex-col lg:flex-row gap-8 mt-8">
           <ul>
-            <h4 className="font-semibold text-lg">Our Classes</h4>
+            <p className="font-semibold text-lg">Our Classes</p>
             <li className="hover:font-semibold cursor-pointer">
               Fitness Classes
             </li>
@@ -36,7 +35,7 @@ function Footer() {
             </li>
           </ul>
           <ul>
-            <h4 className="font-semibold text-lg">Working Hours</h4>
+            <p className="font-semibold text-lg">Working Hours</p>
             <li>
               Mon-Fri &#x2015; <span className="font-semibold">7am-11pm</span>
             </li>

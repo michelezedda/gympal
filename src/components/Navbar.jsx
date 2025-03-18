@@ -23,7 +23,7 @@ function Navbar() {
               <li className="cursor-pointer hover:font-semibold">Plans</li>
             </Link>
             <Link to={"/schedule"}>
-              <li className="cursor-pointer hover:font-semibold">Contact</li>
+              <li className="cursor-pointer hover:font-semibold">Schedule</li>
             </Link>
           </ul>
         </div>

@@ -1,6 +1,16 @@
-import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PlanCard({ plan }) {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    setSelectedPlan(e.target.value);
+    navigate("/checkout");
+  };
+
   return (
     <>
       <div className="relative flex flex-col place-items-center w-80 h-90">
@@ -17,7 +27,11 @@ function PlanCard({ plan }) {
               <li>{plan.perks}</li>
             )}
           </ul>
-          <button className="bg-neutral-800 hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold">
+          <button
+            className="bg-neutral-800 hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold"
+            onClick={handleClick}
+            value={plan.id}
+          >
             PURCHASE NOW
           </button>
         </div>
