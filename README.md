@@ -19,4 +19,4 @@ GymPal makes it easy to plan and manage workouts by giving users a seamless way 
 - **React Icons**: A library providing popular icons as React components.
 
 ## Project Link
-Explore RentMe: :link: [GymPal](https://gympal-demo.vercel.app/)
+Explore GymPal: :link: [GymPal](https://gympal-demo.vercel.app/)
