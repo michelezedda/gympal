@@ -9,6 +9,7 @@ import maxPic from "/media/max.png";
 import annaPic from "/media/anna.png";
 import tomPic from "/media/tom.png";
 import lilyPic from "/media/lily.png";
+import leoPic from "/media/leo.png";
 
 const trainers = [
   {
@@ -74,8 +75,14 @@ const trainers = [
   {
     id: 10,
     name: "Lily Zen",
-    class: "Meditation & Yoga Trainer",
+    class: "Meditation Coach",
     pic: lilyPic,
+  },
+  {
+    id: 11,
+    name: "Leo Steel",
+    class: "Strength Coach",
+    pic: leoPic,
   },
 ];
 

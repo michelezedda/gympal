@@ -13,6 +13,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-color: #497d0069 #0c0c0c;
+  scroll-behavior: smooth;
 }
 
 html,

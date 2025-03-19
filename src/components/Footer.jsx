@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="w-full flex flex-col lg:flex-row justify-around bg-black p-4 text-neutral-400">
+      <div className="flex flex-col lg:flex-row justify-around bg-black p-4 text-neutral-400">
         <div className="flex flex-col items-start gap-2">
           <div className="flex gap-1 items-center">
             <img src="/media/logo.png" alt="GymPal logo" className="h-14" />

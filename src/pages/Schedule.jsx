@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import trainers from "../data/trainers";
 
@@ -128,12 +129,12 @@ function Schedule() {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-3 md:flex mt-30 gap-2 container mx-auto max-w-screen-xl justify-center px-4">
+      <div className="mx-auto max-w-screen-xl grid grid-cols-3 md:flex mt-34 gap-2 justify-center px-4">
         {days.map((d) => (
           <button
             key={d}
-            className={`text-neutral-950 duration-300 rounded-full px-4 py-2 cursor-pointer active:scale-98 ${
-              day === d ? "bg-lime-600 font-semibold" : "bg-neutral-400"
+            className={`text-neutral-950 duration-300 rounded-full px-4 py-2 cursor-pointer active:scale-98 md:text-xl lg:text-2xl font-semibold ${
+              day === d ? "bg-lime-600" : "bg-neutral-400"
             }`}
             onClick={() => setDay(d)}
           >
@@ -141,33 +142,36 @@ function Schedule() {
           </button>
         ))}
       </div>
-      <div className="flex flex-col text-xl mt-10 py-4 md:mb-50">
+      <div className="flex flex-col text-xl mt-6 py-4">
         {classes.length > 0 ? (
           classes.map((c, index) => (
             <div
               key={index}
-              className="flex flex-col odd:bg-neutral-950 even:bg-neutral-900 w-full p-10"
+              className="flex odd:bg-neutral-950 even:bg-neutral-900 w-full p-10 items-center"
             >
-              <div className="grid grid-cols-3 gap-6 px-4">
-                <p className="flex flex-col">
-                  <strong>Class</strong> {c.className}
-                </p>
-                <p className="flex flex-col">
-                  <strong>Time</strong> {c.time}
-                </p>
-                <p className="flex flex-col">
-                  <strong>Trainer</strong> {c.trainer.name}
-                </p>
+              <div className="mx-auto max-w-screen-xl w-full flex flex-col lg:flex-row justify-between">
+                <div className="flex justify-between items-center gap-6 px-4 basis-2/4">
+                  <p className="flex flex-col">
+                    <strong>Class</strong> {c.className}
+                  </p>
+                  <p className="flex flex-col">
+                    <strong>Time</strong> {c.time}
+                  </p>
+                  <p className="flex flex-col">
+                    <strong>Trainer</strong> {c.trainer.name}
+                  </p>
+                </div>
+                <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 rounded-full px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-10 lg:mt-0 basis-1/6">
+                  Schedule Now
+                </button>
               </div>
-              <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 rounded-full px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-10">
-                Schedule Now
-              </button>
             </div>
           ))
         ) : (
           <p>No classes available.</p>
         )}
       </div>
+      <Banner />
       <Footer />
     </>
   );
