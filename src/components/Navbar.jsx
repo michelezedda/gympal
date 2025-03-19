@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
+import { useState } from "react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
   return (
     <>
-      <div className="fixed flex flex-col md:flex-row top-4 left-1/2 transform -translate-x-1/2 bg-neutral-800 rounded-full px-4 py-1 md:py-2 items-center justify-between w-full max-w-11/12 xl:max-w-10/12 shadow-md shadow-neutral-950 z-30 gap-1">
+      <nav className="fixed flex md:flex-row top-4 left-1/2 transform -translate-x-1/2 bg-neutral-800 rounded-full px-4 py-1 md:py-2 items-center justify-between w-full max-w-11/12 xl:max-w-10/12 shadow-md shadow-neutral-950 z-30 gap-1">
         <Link to={"/"}>
           <div className="flex items-center gap-1">
             <img src="/media/logo.png" alt="GymPal logo" className="h-10" />
@@ -11,7 +19,54 @@ function Navbar() {
           </div>
         </Link>
         <div>
-          <ul className="flex gap-4 text-neutral-300 font-semibold">
+          {/* Menu Icon */}
+          <div className="flex md:hidden">
+            {isMenuOpen ? (
+              <IoClose
+                size={30}
+                className="cursor-pointer"
+                onClick={handleMenu}
+              />
+            ) : (
+              <HiMenuAlt3
+                size={30}
+                className="cursor-pointer"
+                onClick={handleMenu}
+              />
+            )}
+          </div>
+          {/* Mobile */}
+          {isMenuOpen && (
+            <ul className="md:hidden absolute top-14 rounded-2xl left-0 w-full flex flex-col gap-4 p-8 items-center text-neutral-300 font-semibold bg-neutral-800 shadow-md shadow-neutral-950 text-lg transition-transform duration-300 motion-preset-slide-down-sm">
+              <Link to={"/"}>
+                <li className="cursor-pointer  hover:text-neutral-500 duration-200">
+                  HOME
+                </li>
+              </Link>
+              <Link to={"/about"}>
+                <li className="cursor-pointer  hover:text-neutral-500 duration-200">
+                  ABOUT US
+                </li>
+              </Link>
+              <Link to={"/classes"}>
+                <li className="cursor-pointer hover:text-neutral-500 duration-200">
+                  CLASSES
+                </li>
+              </Link>
+              <Link to={"/plans"}>
+                <li className="cursor-pointer hover:text-neutral-500 duration-200">
+                  PLANS
+                </li>
+              </Link>
+              <Link to={"/schedule"}>
+                <li className="cursor-pointer  hover:text-neutral-500 duration-200">
+                  SCHEDULE
+                </li>
+              </Link>
+            </ul>
+          )}
+          {/* Desktop */}
+          <ul className="hidden md:flex gap-4 text-neutral-300 font-semibold">
             <Link to={"/"}>
               <li className="cursor-pointer  hover:text-neutral-500 duration-200">
                 Home
@@ -39,7 +94,7 @@ function Navbar() {
             </Link>
           </ul>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
