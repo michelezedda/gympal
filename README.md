@@ -17,6 +17,7 @@ GymPal makes it easy to plan and manage workouts by giving users a seamless way 
 - **Vite**: Front-end dev tool improving developer experience.
 - **react-hot-toast**: A React library for displaying customizable notifications.
 - **React Icons**: A library providing popular icons as React components.
+- **Rombo**: A JavaScript library for smooth and performant animations.
 
 ## Project Link
 Explore GymPal: :link: [GymPal](https://gympal-demo.vercel.app/)
