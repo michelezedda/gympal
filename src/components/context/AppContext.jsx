@@ -5,8 +5,10 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <AppContext.Provider value={{ selectedPlan, setSelectedPlan }}>
+    <AppContext.Provider value={{ selectedPlan, setSelectedPlan, scrollToTop }}>
       {children}
     </AppContext.Provider>
   );

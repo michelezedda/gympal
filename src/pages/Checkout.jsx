@@ -13,7 +13,7 @@ function Checkout() {
     email: "",
   });
 
-  const { selectedPlan } = useAppContext();
+  const { selectedPlan, scrollToTop } = useAppContext();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -27,6 +27,11 @@ function Checkout() {
   useEffect(() => {
     if (!selectedPlan) navigate("/plans");
   }, [selectedPlan, navigate]);
+
+  // Scroll to top
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>
