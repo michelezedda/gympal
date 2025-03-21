@@ -58,7 +58,7 @@ function Checkout() {
               id="firstName"
               type="text"
               className="border-2 border-white rounded-lg px-2 py-1 focus:outline-lime-600"
-              placeholder="Your name"
+              placeholder="Your first name"
               value={formData.firstName}
               onChange={(e) => {
                 setFormData({ ...formData, firstName: e.target.value });

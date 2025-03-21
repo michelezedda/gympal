@@ -9,7 +9,7 @@ function Hero() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    setIsVideoOpen((prevState) => !prevState);
+    setIsVideoOpen(true);
   };
 
   return (
