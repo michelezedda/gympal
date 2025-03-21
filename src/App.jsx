@@ -5,7 +5,7 @@ import Classes from "./pages/classes/Classes";
 import PlansPage from "./pages/PlansPage";
 import Schedule from "./pages/Schedule";
 import Checkout from "./pages/Checkout";
-import { AppProvider } from "./components/context/AppContext.jsx";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import { useAppContext } from "../components/context/AppContext";
+import { useAppContext } from "../context/AppContext";
 
 function Checkout() {
   const [formData, setFormData] = useState({

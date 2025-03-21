@@ -5,7 +5,7 @@ import Plans from "./components/plans/Plans";
 import Gallery from "./components/Gallery";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import { useAppContext } from "../components/context/AppContext";
+import { useAppContext } from "./context/AppContext";
 import { useEffect } from "react";
 
 function Home() {
