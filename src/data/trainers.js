@@ -38,27 +38,15 @@ const trainers = [
   },
   {
     id: 4,
-    name: "Laura Flex",
-    class: "Pilates Instructor",
-    pic: lauraPic,
-  },
-  {
-    id: 5,
     name: "Chris Iron",
     class: "Weightlifting Coach",
     pic: chrisPic,
   },
   {
-    id: 6,
-    name: "Sophie Sprint",
+    id: 5,
+    name: "Sophie Flex",
     class: "Running Coach",
     pic: sophiePic,
-  },
-  {
-    id: 7,
-    name: "Max Pump",
-    class: "Personal Trainer",
-    pic: maxPic,
   },
 ];
 

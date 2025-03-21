@@ -4,7 +4,7 @@ import plans from "../../data/plans";
 function Plans() {
   return (
     <>
-      <div className="flex flex-col place-items-center mt-20 2xl:mt-40">
+      <div className="flex flex-col place-items-center mt-30 xl:mt-40">
         <h3 className="text-4xl lg:text-6xl text-lime-600 font-bold">
           OUR PLANS
         </h3>

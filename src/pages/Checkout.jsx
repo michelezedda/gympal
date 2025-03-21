@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
 
@@ -14,7 +13,6 @@ function Checkout() {
   });
 
   const { selectedPlan, scrollToTop } = useAppContext();
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,11 +20,6 @@ function Checkout() {
       `You’re strong ${formData.firstName} ${formData.lastName}, but not strong enough to break through this demo!`
     );
   };
-
-  // Redirect if no plan is selected
-  useEffect(() => {
-    if (!selectedPlan) navigate("/plans");
-  }, [selectedPlan, navigate]);
 
   // Scroll to top
   useEffect(() => {
@@ -36,10 +29,10 @@ function Checkout() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto max-w-screen-xl mt-26 mb-20 px-4">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-2xl">You're almost there Pal! 🎉</h2>
-          <p className="text-lg">
+      <div className="mx-auto max-w-screen-xl mt-30 mb-20 px-4 min-h-screen">
+        <div className="flex flex-col items-center justify-center gap-4 xl:gap-6 xl:">
+          <h2 className="text-2xl xl:text-4xl">You're almost there Pal! 🎉</h2>
+          <p className="text-lg xl:text-2xl">
             You’ve selected the{" "}
             <strong className="text-lime-600">
               {selectedPlan.title.toUpperCase()}
@@ -115,10 +108,10 @@ function Checkout() {
                   $ {selectedPlan.price}
                 </strong>
               </span>
-              <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 rounded-lg px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-8 mx-10 text-md xl:text-xl border-2 border-white hover:border-lime-400">
-                CHECKOUT
-              </button>
             </div>
+            <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 rounded-lg px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-8 text-md xl:text-xl border-2 border-white hover:border-lime-400 mb-4">
+              CHECKOUT
+            </button>
             <Toaster />
           </form>
         </div>

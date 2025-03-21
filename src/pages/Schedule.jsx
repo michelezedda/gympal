@@ -22,7 +22,7 @@ function Schedule() {
           {
             className: "Body Building",
             time: "10 AM - 12 AM",
-            trainer: trainers[7],
+            trainer: trainers[4],
           },
           { className: "Yoga", time: "2 PM - 3 PM", trainer: trainers[2] },
           {
@@ -36,17 +36,17 @@ function Schedule() {
           {
             className: "Pilates",
             time: "8 AM - 9:30 AM",
-            trainer: trainers[0],
+            trainer: trainers[1],
           },
           {
             className: "Body Building",
             time: "4 PM - 6 PM",
-            trainer: trainers[5],
+            trainer: trainers[3],
           },
           {
             className: "Self-Defense",
             time: "8 PM - 9 PM",
-            trainer: trainers[3],
+            trainer: trainers[5],
           },
         ];
       case "Wednesday":
@@ -64,7 +64,7 @@ function Schedule() {
           {
             className: "Boxing",
             time: "4 PM - 5:30 PM",
-            trainer: trainers[6],
+            trainer: trainers[0],
           },
         ];
       case "Thursday":
@@ -72,7 +72,7 @@ function Schedule() {
           {
             className: "Kickboxing",
             time: "10:00 AM - 11:30 AM",
-            trainer: trainers[7],
+            trainer: trainers[3],
           },
           {
             className: "Body Building",
@@ -113,7 +113,7 @@ function Schedule() {
           {
             className: "Body Building",
             time: "11 AM - 13 PM",
-            trainer: trainers[6],
+            trainer: trainers[4],
           },
           {
             className: "Self-Defense",
@@ -151,13 +151,13 @@ function Schedule() {
             >
               <div className="mx-auto max-w-screen-xl w-full flex flex-col lg:flex-row justify-between">
                 <div className="flex justify-between items-center gap-6 px-4 basis-2/4">
-                  <p className="flex flex-col">
+                  <p className="flex flex-col basis-1/3">
                     <strong>Class</strong> {c.className}
                   </p>
-                  <p className="flex flex-col">
+                  <p className="flex flex-col basis-1/3">
                     <strong>Time</strong> {c.time}
                   </p>
-                  <p className="flex flex-col">
+                  <p className="flex flex-col basis-1/3">
                     <strong>Trainer</strong> {c.trainer.name}
                   </p>
                 </div>
