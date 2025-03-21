@@ -15,7 +15,7 @@ function CCard({ c }) {
           <h4 className="absolute top-3 left-1/2 -translate-x-1/2 text-xl xl:text-2xl font-semibold">
             {c.name}
           </h4>
-          <p className="absolute top-10 w-full p-1 left-1/2 -translate-x-1/2 text-sm sm:text-lg">
+          <p className="absolute top-17 w-full p-1 left-1/2 -translate-x-1/2 text-sm sm:text-lg">
             {c.description}
           </p>
           <button
