@@ -36,7 +36,7 @@ function Schedule() {
           {
             className: "Pilates",
             time: "8 AM - 9:30 AM",
-            trainer: trainers[10],
+            trainer: trainers[0],
           },
           {
             className: "Body Building",
@@ -59,7 +59,7 @@ function Schedule() {
           {
             className: "Zumba",
             time: "1 PM - 2 PM",
-            trainer: trainers[9],
+            trainer: trainers[1],
           },
           {
             className: "Boxing",
@@ -72,7 +72,7 @@ function Schedule() {
           {
             className: "Kickboxing",
             time: "10:00 AM - 11:30 AM",
-            trainer: trainers[8],
+            trainer: trainers[7],
           },
           {
             className: "Body Building",
@@ -90,7 +90,7 @@ function Schedule() {
           {
             className: "Stretching & Mobility",
             time: "11 AM - 12:30 PM",
-            trainer: trainers[9],
+            trainer: trainers[5],
           },
           {
             className: "Yoga",

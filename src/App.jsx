@@ -5,19 +5,22 @@ import Classes from "./pages/classes/Classes";
 import PlansPage from "./pages/PlansPage";
 import Schedule from "./pages/Schedule";
 import Checkout from "./pages/Checkout";
+import { AppProvider } from "./components/context/AppContext.jsx";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/classes" element={<Classes />} />
-        <Route path="/plans" element={<PlansPage />} />
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
+      <AppProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/classes" element={<Classes />} />
+          <Route path="/plans" element={<PlansPage />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </AppProvider>
     </>
   );
 }

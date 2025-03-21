@@ -60,30 +60,6 @@ const trainers = [
     class: "Personal Trainer",
     pic: maxPic,
   },
-  {
-    id: 8,
-    name: "Anna Cardio",
-    class: "Personal Trainer",
-    pic: annaPic,
-  },
-  {
-    id: 9,
-    name: "Tom Endure",
-    class: "Endurance Coach",
-    pic: tomPic,
-  },
-  {
-    id: 10,
-    name: "Lily Zen",
-    class: "Meditation Coach",
-    pic: lilyPic,
-  },
-  {
-    id: 11,
-    name: "Leo Steel",
-    class: "Strength Coach",
-    pic: leoPic,
-  },
 ];
 
 export default trainers;

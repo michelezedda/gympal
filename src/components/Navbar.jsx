@@ -11,7 +11,7 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="fixed flex md:flex-row top-4 left-1/2 transform -translate-x-1/2 bg-neutral-800 rounded-full px-4 py-1 md:py-2 items-center justify-between w-full max-w-11/12 xl:max-w-10/12 shadow-md shadow-neutral-950 z-30 gap-1">
+      <nav className="fixed flex md:flex-row top-4 left-1/2 transform -translate-x-1/2 bg-neutral-800 rounded-full px-4 py-2 items-center justify-between w-full max-w-11/12 xl:max-w-10/12 shadow-md shadow-neutral-950 z-30 gap-1">
         <Link to={"/"}>
           <div className="flex items-center gap-1">
             <img src="/media/logo.png" alt="GymPal logo" className="h-10" />
@@ -37,7 +37,7 @@ function Navbar() {
           </div>
           {/* Mobile */}
           {isMenuOpen && (
-            <ul className="md:hidden absolute top-14 rounded-2xl left-0 w-full flex flex-col gap-4 p-8 items-center text-neutral-300 font-semibold bg-neutral-800 shadow-md shadow-neutral-950 text-lg transition-transform duration-300 motion-preset-slide-down-sm">
+            <ul className="md:hidden absolute top-16 rounded-2xl left-0 w-full flex flex-col gap-4 p-8 items-center text-neutral-300 font-semibold bg-neutral-800 shadow-md shadow-neutral-950 text-lg transition-transform duration-300 motion-preset-slide-down-sm">
               <Link to={"/"}>
                 <li className="cursor-pointer  hover:text-neutral-500 duration-200">
                   HOME

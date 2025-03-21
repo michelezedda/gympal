@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../context/AppContext";
 
 function PlanCard({ plan }) {
-  const [selectedPlan, setSelectedPlan] = useState(null);
-
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
-    setSelectedPlan(e.target.value);
+  const { setSelectedPlan } = useAppContext();
+
+  const handleClick = () => {
+    setSelectedPlan(plan);
     navigate("/checkout");
   };
 
@@ -32,7 +32,6 @@ function PlanCard({ plan }) {
           <button
             className="absolute bottom-10 bg-neutral-800 hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold"
             onClick={handleClick}
-            value={plan.id}
           >
             PURCHASE NOW
           </button>
