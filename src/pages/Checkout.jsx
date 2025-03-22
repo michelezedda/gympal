@@ -17,7 +17,7 @@ function Checkout() {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.error(
-      `You’re strong ${formData.firstName} ${formData.lastName}, but not strong enough to break through this demo!`
+      `Great job, ${formData.firstName}! If this weren’t a demo, we’d totally be in touch.`
     );
   };
 
@@ -29,28 +29,29 @@ function Checkout() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto max-w-screen-xl mt-30 mb-20 px-4 min-h-screen">
+      <div className="mx-auto max-w-screen-lg mt-40 mb-25 px-4 min-h-screen">
         <div className="flex flex-col items-center justify-center gap-4 xl:gap-6 xl:">
-          <h2 className="text-2xl xl:text-4xl">You're almost there Pal! 🎉</h2>
-          <p className="text-lg xl:text-2xl">
-            You’ve selected the{" "}
+          <h2 className="text-4xl xl:text-5xl">You're almost there Pal! 💪🏽</h2>
+          <p className="text-2xl xl:text-3xl">
+            Your{" "}
             <strong className="text-lime-600">
               {selectedPlan.title.toUpperCase()}
             </strong>{" "}
-            plan — great choice! Get ready to take your fitness journey to the
-            next level with GymPal.
+            plan is locked in! — great choice! Get ready to take your fitness
+            journey to the next level with GymPal. Just one last step—fill out
+            the form, and we’ll be in touch to help you get started.
           </p>
         </div>
         <div className="mt-8 flex flex-col">
           <form
-            className="flex flex-col bg-neutral-800 rounded-lg p-4 text-xl gap-4"
+            className="flex flex-col bg-neutral-900 shadow-lg shadow-neutral-950 p-4 text-xl gap-4"
             onSubmit={handleSubmit}
           >
             <label htmlFor="firstName">First name: </label>
             <input
               id="firstName"
               type="text"
-              className="border-2 border-white rounded-lg px-2 py-1 focus:outline-lime-600"
+              className="border-2 border-white px-2 py-1 focus:outline-lime-600"
               placeholder="Your first name"
               value={formData.firstName}
               onChange={(e) => {
@@ -62,7 +63,7 @@ function Checkout() {
             <input
               id="lastName"
               type="text"
-              className="border-2 border-white rounded-lg px-2 py-1 focus:outline-lime-600"
+              className="border-2 border-white px-2 py-1 focus:outline-lime-600"
               placeholder="Your last name"
               value={formData.lastName}
               onChange={(e) => {
@@ -70,23 +71,28 @@ function Checkout() {
               }}
               required
             />
-            <label htmlFor="address">Address</label>
-            <input
-              id="address"
-              type="text"
-              className="border-2 border-white rounded-lg px-2 py-1 focus:outline-lime-600"
-              placeholder="Your address"
-              value={formData.address}
-              onChange={(e) => {
-                setFormData({ ...formData, address: e.target.value });
-              }}
+            <label htmlFor="location">Location:</label>
+            <select
+              name="location"
+              id="location"
+              className="border-2 border-white px-2 py-1 focus:outline-lime-600"
               required
-            />
+            >
+              <option value="" selected disabled>
+                -- Select a location --
+              </option>
+              <option value="Santa Monica" className="text-black">
+                Santa Monica
+              </option>
+              <option value="Santa Monica" className="text-black">
+                Los Angeles
+              </option>
+            </select>
             <label htmlFor="email">E-mail:</label>
             <input
               id="email"
               type="email"
-              className="border-2 border-white rounded-lg px-2 py-1 focus:outline-lime-600"
+              className="border-2 border-white px-2 py-1 focus:outline-lime-600"
               placeholder="your@email.com"
               value={formData.email}
               onChange={(e) => {
@@ -109,8 +115,8 @@ function Checkout() {
                 </strong>
               </span>
             </div>
-            <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 rounded-lg px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-8 text-md xl:text-xl border-2 border-white hover:border-lime-400 mb-4">
-              CHECKOUT
+            <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-8 text-md xl:text-xl mb-4">
+              SUBMIT
             </button>
             <Toaster />
           </form>

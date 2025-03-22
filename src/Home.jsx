@@ -19,7 +19,7 @@ function Home() {
     <>
       <Navbar />
       <Hero />
-      <div className="container mx-auto max-w-screen-xl">
+      <div className="container mx-auto max-w-screen-lg">
         <Trainers />
         <Plans />
         <Gallery />

@@ -1,15 +1,11 @@
 import emmaPic from "/media/Emma.png";
-import johnPic from "/media/John.png";
+import johnPic from "/media/john.png";
 import mikePic from "/media/Mike.png";
 import jakePic from "/media/jake.png";
-import lauraPic from "/media/laura.png";
 import chrisPic from "/media/chris.png";
 import sophiePic from "/media/sophie.png";
 import maxPic from "/media/max.png";
 import annaPic from "/media/anna.png";
-import tomPic from "/media/tom.png";
-import lilyPic from "/media/lily.png";
-import leoPic from "/media/leo.png";
 
 const trainers = [
   {
@@ -47,6 +43,18 @@ const trainers = [
     name: "Sophie Flex",
     class: "Running Coach",
     pic: sophiePic,
+  },
+  {
+    id: 6,
+    name: "Max Endure",
+    class: "Endurance Coach",
+    pic: maxPic,
+  },
+  {
+    id: 7,
+    name: "Anna Flow",
+    class: "Pilates Instructor",
+    pic: annaPic,
   },
 ];
 

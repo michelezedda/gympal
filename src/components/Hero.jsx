@@ -15,24 +15,24 @@ function Hero() {
   return (
     <>
       <div className="flex relative h-[100dvh] bg-[url(/media/background.png)] bg-center bg-cover bg-no-repeat">
-        <div className="flex flex-col text-center mx-auto max-w-screen-xl justify-center items-center">
-          <h1 className="text-[74px] lg:text-[150px] leading-20 lg:leading-34 text-lime-600 font-black shadow-md">
+        <div className="flex flex-col text-center mx-auto max-w-screen-lg justify-center items-center">
+          <h1 className="text-[74px] lg:text-[98px] leading-20 lg:leading-24 text-lime-600 font-black shadow-md">
             SCULPT YOUR BODY,
             <br />
             ELEVATE YOUR SOUL
           </h1>
           <div className="flex mt-10 gap-6 font-semibold">
             <button
-              className="py-2 px-6 rounded-full bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-3xl"
-              onClick={() => navigate("/classes")}
+              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
+              onClick={() => navigate("/plans")}
             >
-              OUR CLASSES
+              JOIN NOW
             </button>
             <button
-              className="py-2 px-2 rounded-full bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer"
+              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
               onClick={handleClick}
             >
-              <MdOutlineSlowMotionVideo className="size-10 lg:size-12" />
+              WATCH VIDEO
             </button>
           </div>
         </div>

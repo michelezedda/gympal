@@ -7,7 +7,7 @@ function PlansPage() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto max-w-screen-xl mb-50">
+      <div className="mx-auto max-w-screen-lg mb-50">
         <Plans />
       </div>
       <Banner />
