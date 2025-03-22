@@ -2,8 +2,17 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import classes from "../../data/classes";
 import CCard from "../classes/CCard";
+import { useEffect } from "react";
+import { useAppContext } from "../../context/AppContext";
 
 function Classes() {
+  const { scrollToTop } = useAppContext();
+
+  // Scroll to top
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <Navbar />

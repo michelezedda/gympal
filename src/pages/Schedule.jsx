@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import trainers from "../data/trainers";
+import { useEffect } from "react";
+import { useAppContext } from "../context/AppContext";
 
 function Schedule() {
   const days = [
@@ -13,7 +15,14 @@ function Schedule() {
     "Friday",
     "Saturday",
   ];
+
   const [day, setDay] = useState(days[0]);
+  const { scrollToTop } = useAppContext();
+
+  // Scroll to top
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   const displayInfo = (day) => {
     switch (day) {

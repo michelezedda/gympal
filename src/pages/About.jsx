@@ -1,7 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
+import { useAppContext } from "../context/AppContext";
 
 function About() {
+  const { scrollToTop } = useAppContext();
+
+  // Scroll to top
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
       <Navbar />
