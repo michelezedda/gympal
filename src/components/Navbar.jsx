@@ -37,7 +37,7 @@ function Navbar() {
           </div>
           {/* Mobile */}
           {isMenuOpen && (
-            <ul className="md:hidden absolute top-16 rounded-2xl left-0 w-full flex flex-col gap-4 p-8 items-center text-neutral-300 font-semibold bg-neutral-800 shadow-md shadow-neutral-950 text-lg transition-transform duration-300 motion-preset-slide-down-sm">
+            <ul className="md:hidden absolute top-16 left-0 w-full flex flex-col gap-4 p-8 items-center text-neutral-300 font-semibold bg-neutral-950 shadow-md shadow-black text-lg transition-transform duration-300  motion-preset-slide-down-sm">
               <Link to={"/"}>
                 <li className="cursor-pointer  hover:text-neutral-500 duration-200">
                   HOME
