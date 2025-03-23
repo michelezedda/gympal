@@ -13,7 +13,7 @@ function CCard({ c }) {
 
   return (
     <>
-      <div className="relative min-h-85">
+      <div className="relative">
         <img
           src={c.img}
           alt={c.name}
