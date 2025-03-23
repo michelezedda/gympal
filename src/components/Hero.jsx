@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 

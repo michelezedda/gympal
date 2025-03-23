@@ -1,7 +1,7 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
-import { square } from "ldrs";
+import "ldrs/lineWobble";
 
 function App() {
   const Home = lazy(() => import("./Home"));
@@ -11,22 +11,20 @@ function App() {
   const Schedule = lazy(() => import("./pages/Schedule"));
   const Checkout = lazy(() => import("./pages/Checkout"));
 
-  square.register();
-
   return (
     <>
       <AppProvider>
         <Suspense
           fallback={
             <div className="flex justify-center items-center h-screen">
-              <l-square
-                size="35"
+              <l-line-wobble
+                size="75"
                 stroke="5"
                 stroke-length="0.25"
                 bg-opacity="0.1"
                 speed="1.2"
-                color="black"
-              ></l-square>
+                color="#5EA500"
+              ></l-line-wobble>
             </div>
           }
         >
