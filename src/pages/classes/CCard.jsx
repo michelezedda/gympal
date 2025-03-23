@@ -17,8 +17,8 @@ function CCard({ c }) {
         <img
           src={c.img}
           alt={c.name}
-          className={`transition-opacity duration-300 ${
-            loaded ? "opacity-30" : "opacity-0"
+          className={`opacity-30 transition-opacity duration-300 ${
+            loaded ? "blur-none" : "blur-lg"
           }`}
           loading="lazy"
           onLoad={() => setLoaded(true)}
