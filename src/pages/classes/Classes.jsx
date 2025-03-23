@@ -20,7 +20,7 @@ function Classes() {
         <h2 className="text-lime-600 text-4xl lg:text-6xl font-bold mb-10 text-center mx-6">
           WORKOUTS DESIGNED FOR YOU
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 mx-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 mx-6 w-full">
           {classes.map((c) => (
             <div key={c.id}>
               <CCard c={c} />
