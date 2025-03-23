@@ -1,6 +1,9 @@
 import toast, { Toaster } from "react-hot-toast";
+import { useState } from "react";
 
 function CCard({ c }) {
+  const [loaded, setLoaded] = useState(false);
+
   // Toaster
   const handleClick = () => {
     toast.error(
@@ -10,8 +13,16 @@ function CCard({ c }) {
 
   return (
     <>
-      <div className="relative">
-        <img src={c.img} alt={c.name} className="opacity-30" />
+      <div className="relative min-h-85">
+        <img
+          src={c.img}
+          alt={c.name}
+          className={`transition-opacity duration-300 ${
+            loaded ? "opacity-30" : "opacity-0"
+          }`}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+        />
         <div className="flex text-center gap-2 flex-col p-2">
           <h4 className="absolute w-full top-3 left-1/2 -translate-x-1/2 text-xl xl:text-2xl font-semibold">
             {c.name}
