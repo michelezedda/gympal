@@ -1,6 +1,7 @@
 import toast, { Toaster } from "react-hot-toast";
 
 function CCard({ c }) {
+  // Toaster
   const handleClick = () => {
     toast.error(
       "Demo mode: Activated. Scheduling classes: Deactivated. Your gains: Pending."
@@ -24,9 +25,9 @@ function CCard({ c }) {
           >
             SCHEDULE NOW
           </button>
-          <Toaster />
         </div>
       </div>
+      <Toaster />
     </>
   );
 }

@@ -6,9 +6,11 @@ import { useState } from "react";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Function to toggle menu
   const handleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
+
   return (
     <>
       <nav className="fixed flex md:flex-row top-0 left-1/2 transform -translate-x-1/2 bg-neutral-950 px-4 py-4 items-center justify-between md:justify-around w-full max-w-screen-lg shadow-md shadow-black z-30 gap-1">

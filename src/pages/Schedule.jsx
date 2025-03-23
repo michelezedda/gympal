@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import trainers from "../data/trainers";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
+import toast, { Toaster } from "react-hot-toast";
 
 function Schedule() {
   const days = [
@@ -24,6 +25,14 @@ function Schedule() {
     scrollToTop();
   }, []);
 
+  // Toaster
+  const handleClick = () => {
+    toast.error(
+      "Demo mode: Activated. Scheduling classes: Deactivated. Your gains: Pending."
+    );
+  };
+
+  // Function to display class info based on the selected day
   const displayInfo = (day) => {
     switch (day) {
       case "Monday":
@@ -170,7 +179,10 @@ function Schedule() {
                     <strong>Trainer</strong> {c.trainer.name}
                   </p>
                 </div>
-                <button className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 shadow-md shadow-neutral-950 px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-10 lg:mt-0 basis-1/4">
+                <button
+                  className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 shadow-md shadow-neutral-950 px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-10 lg:mt-0 basis-1/4"
+                  onClick={handleClick}
+                >
                   SCHEDULE NOW
                 </button>
               </div>
@@ -182,6 +194,7 @@ function Schedule() {
       </div>
       <Banner />
       <Footer />
+      <Toaster />
     </>
   );
 }

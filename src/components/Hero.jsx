@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   const navigate = useNavigate();
 
+  // Function to open the video
   const handleClick = () => {
     setIsVideoOpen(true);
   };
