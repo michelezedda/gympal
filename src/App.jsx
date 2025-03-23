@@ -1,15 +1,15 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./pages/About";
-import PlansPage from "./pages/PlansPage";
-import Schedule from "./pages/Schedule";
-import Checkout from "./pages/Checkout";
 import { AppProvider } from "./context/AppContext";
 import { square } from "ldrs";
 
 function App() {
+  const Home = lazy(() => import("./Home"));
+  const About = lazy(() => import("./pages/About"));
   const Classes = lazy(() => import("./pages/classes/Classes"));
+  const PlansPage = lazy(() => import("./pages/PlansPage"));
+  const Schedule = lazy(() => import("./pages/Schedule"));
+  const Checkout = lazy(() => import("./pages/Checkout"));
 
   square.register();
 
