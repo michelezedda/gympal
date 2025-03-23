@@ -30,8 +30,8 @@ function Checkout() {
   return (
     <>
       <Navbar />
-      <div className="bg-center bg-cover bg-no-repeat bg-[url(/media/checkout.png)] pt-40">
-        <div className="mx-auto max-w-screen-lg mb-25 px-4 min-h-screen">
+      <div className="bg-center bg-cover bg-no-repeat bg-[url(/media/checkout.png)] pt-40 pb-15">
+        <div className="mx-auto max-w-screen-lg px-4 min-h-screen">
           <div className="flex flex-col items-center justify-center gap-4 xl:gap-6">
             <h2 className="text-4xl xl:text-5xl text-center">
               Great choice, Pal! 💪🏽
