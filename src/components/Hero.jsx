@@ -15,7 +15,7 @@ function Hero() {
     <>
       <div className="flex relative h-[100dvh] bg-[url(/media/background.png)] bg-center bg-cover bg-no-repeat">
         <div className="flex flex-col text-center mx-auto max-w-screen-lg justify-center items-center">
-          <h1 className="text-[74px] lg:text-[98px] leading-20 lg:leading-24 text-lime-600 font-black shadow-md">
+          <h1 className="text-[74px] lg:text-[98px] leading-20 lg:leading-24 text-lime-600 font-black shadow-md font-[Rubik_Glitch]">
             SCULPT YOUR BODY,
             <br />
             ELEVATE YOUR SOUL
