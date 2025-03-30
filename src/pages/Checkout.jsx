@@ -8,11 +8,18 @@ function Checkout() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    address: "",
     email: "",
   });
 
   const { selectedPlan, scrollToTop } = useAppContext();
+
+  // Handle form data
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   // Toaster
   const handleSubmit = (e) => {
@@ -57,10 +64,8 @@ function Checkout() {
                 type="text"
                 className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                 placeholder="Your first name"
-                value={formData.firstName}
-                onChange={(e) => {
-                  setFormData({ ...formData, firstName: e.target.value });
-                }}
+                name="firstName"
+                onChange={handleChange}
                 required
               />
               <label htmlFor="lastName">Last name:</label>
@@ -69,10 +74,8 @@ function Checkout() {
                 type="text"
                 className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                 placeholder="Your last name"
-                value={formData.lastName}
-                onChange={(e) => {
-                  setFormData({ ...formData, lastName: e.target.value });
-                }}
+                name="lastName"
+                onChange={handleChange}
                 required
               />
               <label htmlFor="location">Location:</label>
@@ -98,10 +101,8 @@ function Checkout() {
                 type="email"
                 className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                 placeholder="your@email.com"
-                value={formData.email}
-                onChange={(e) => {
-                  setFormData({ ...formData, email: e.target.value });
-                }}
+                name="email"
+                onChange={handleChange}
                 required
               />
               <div className="flex flex-col gap-2 mt-4">
