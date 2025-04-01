@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed flex md:flex-row top-0 left-1/2 transform -translate-x-1/2 bg-neutral-950 px-4 py-4 items-center justify-between md:justify-around w-full max-w-screen-lg shadow-md shadow-black z-30 gap-1">
+      <nav className="fixed flex md:flex-row top-0  bg-neutral-950 px-4 py-4 items-center justify-between md:justify-around w-full shadow-md shadow-black z-30 gap-1">
         <Link to={"/"}>
           <div className="flex items-center gap-1">
             <img src="/media/logo.png" alt="GymPal logo" className="h-10" />
