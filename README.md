@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://i.ibb.co/BV9cPmHv/gympal-project.png" alt="GymPal" width="1100">
+  <img src="https://i.ibb.co/0Vm6fnnv/gympal-project.png" alt="GymPal" width="1100">
   <br>
 </h1>
 
