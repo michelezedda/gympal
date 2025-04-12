@@ -50,7 +50,7 @@ Make sure you have the following installed on your machine:
 2. Navigate into the project directory:
 
     ```bash
-    cd rentme
+    cd gympal
     ```
 
 3. Install dependencies:
