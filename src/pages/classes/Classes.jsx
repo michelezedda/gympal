@@ -1,12 +1,15 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import classes from "../../data/classes";
-import CCard from "../classes/CCard";
 import { useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
+import { lazy, Suspense } from "react";
+import SkeletonCard from "./SkeletonCard";
 
 function Classes() {
   const { scrollToTop } = useAppContext();
+
+  const CCard = lazy(() => import("./CCard"));
 
   // Scroll to top
   useEffect(() => {
@@ -23,7 +26,9 @@ function Classes() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 mx-6 w-full">
           {classes.map((c) => (
             <div key={c.id}>
-              <CCard c={c} />
+              <Suspense fallback={<SkeletonCard />}>
+                <CCard c={c} />
+              </Suspense>
             </div>
           ))}
         </div>
