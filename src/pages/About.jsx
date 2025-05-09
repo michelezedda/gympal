@@ -28,7 +28,7 @@ function About() {
               personal records, we provide the tools you need to stay consistent
               and reach your goals.
             </p>
-            <img src="/media/winner.png" className="flex-1" />
+            <img src="/media/winner.webp" className="flex-1" />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-6">

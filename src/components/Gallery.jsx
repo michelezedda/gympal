@@ -11,27 +11,27 @@ function Gallery() {
             </h3>
             <div className="grid grid-cols-2 gap-1">
               <img
-                src="/media/gallery1.png"
+                src="/media/gallery1.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
               <img
-                src="/media/gallery7.png"
+                src="/media/gallery7.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
               <img
-                src="/media/gallery2.png"
+                src="/media/gallery2.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
               <img
-                src="/media/gallery3.png"
+                src="/media/gallery3.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
               <img
-                src="/media/gallery4.png"
+                src="/media/gallery4.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
               <img
-                src="/media/gallery5.png"
+                src="/media/gallery5.webp"
                 className="w-full h-auto hover:scale-110 duration-200"
               />
             </div>

@@ -15,7 +15,16 @@ function PlanCard({ plan }) {
     <>
       <div className="relative flex flex-col place-items-center w-78.5 h-90">
         <img src={plan.img} alt={plan.name} />
-        <div className="absolute -bottom-30 flex flex-col justify-center items-center bg-neutral-950 py-4 px-10 w-72 h-80">
+        {plan.best && (
+          <span className="absolute top-37 px-2 z-1 bg-lime-600">
+            BEST CHOICE
+          </span>
+        )}
+        <div
+          className={`absolute -bottom-30 flex flex-col justify-center items-center bg-neutral-950 py-4 px-10 w-72 h-80 ${
+            plan.best && "border border-lime-600"
+          }`}
+        >
           <h4 className="absolute top-5 font-bold text-xl mb-2">
             {plan.title.toUpperCase()}
           </h4>
@@ -30,7 +39,11 @@ function PlanCard({ plan }) {
             )}
           </ul>
           <button
-            className="absolute bottom-10 bg-neutral-800 hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold"
+            className={`absolute bottom-10 hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold ${
+              plan.best
+                ? "bg-lime-600 text-neutral-950 hover:text-white hover:shadow-neutral-800"
+                : "bg-neutral-800"
+            }`}
             onClick={handleClick}
           >
             GET STARTED

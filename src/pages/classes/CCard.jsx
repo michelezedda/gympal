@@ -31,7 +31,7 @@ function CCard({ c }) {
             {c.description}
           </p>
           <button
-            className="absolute bottom-7 left-1/2 -translate-x-1/2 w-[90%] text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 py-2 cursor-pointer shadow-md shadow-neutral-900 active:scale-98 font-semibold text-xs xl:text-lg"
+            className="absolute bottom-7 left-1/2 -translate-x-1/2 w-[90%] text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 py-4 cursor-pointer shadow-md shadow-neutral-900 active:scale-98 font-semibold text-sm xl:text-lg"
             onClick={handleClick}
           >
             SCHEDULE NOW

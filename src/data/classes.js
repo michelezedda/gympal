@@ -1,15 +1,15 @@
-import yogaPic from "/media/yoga.png";
-import hiitPic from "/media/hiit.png";
-import pilatesPic from "/media/pilates.png";
-import strengthPic from "/media/strength.png";
-import cardioPic from "/media/cardio.png";
-import zumbaPic from "/media/zumba.png";
-import crossfitPic from "/media/crossfit.png";
-import spinPic from "/media/spin.png";
-import kickboxingPic from "/media/kickboxing.png";
-import bodybuildingPic from "/media/bodybuilding.png";
-import aerobicsPic from "/media/aerobics.png";
-import meditationPic from "/media/meditation.png";
+import yogaPic from "/media/yoga.webp";
+import hiitPic from "/media/hiit.webp";
+import pilatesPic from "/media/pilates.webp";
+import strengthPic from "/media/strength.webp";
+import cardioPic from "/media/cardio.webp";
+import zumbaPic from "/media/zumba.webp";
+import crossfitPic from "/media/crossfit.webp";
+import spinPic from "/media/spin.webp";
+import kickboxingPic from "/media/kickboxing.webp";
+import bodybuildingPic from "/media/bodybuilding.webp";
+import aerobicsPic from "/media/aerobics.webp";
+import meditationPic from "/media/meditation.webp";
 
 const classes = [
   {
