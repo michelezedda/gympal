@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import trainers from "../../data/trainers";
 import TrainerCard from "./TrainerCard";
 import {
@@ -20,6 +20,16 @@ function Trainers() {
       currentTrainer === trainers.length - 1 ? 0 : currentTrainer + 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTrainer((prev) =>
+        prev === trainers.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
