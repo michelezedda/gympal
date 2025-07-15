@@ -15,14 +15,14 @@ function Hero() {
     <>
       <div className="flex relative h-[100dvh] bg-[url(/media/background.webp)] bg-center bg-cover bg-no-repeat">
         <div className="flex flex-col text-center mx-auto max-w-screen-lg justify-center items-center">
-          <h1 className="text-[74px] lg:text-[98px] leading-20 lg:leading-24 text-lime-600 font-black shadow-md font-[Rubik_Glitch]">
+          <h1 className="text-[60px] md:text-[98px] leading-18 md:leading-24 text-lime-600 font-black shadow-md font-[Rubik_Glitch]">
             SCULPT YOUR BODY,
             <br />
             ELEVATE YOUR SOUL
           </h1>
-          <div className="flex mt-10 gap-6 font-semibold">
+          <div className="flex mt-16 gap-6 font-semibold">
             <button
-              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
+              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-lg md:text-xl lg:text-2xl"
               onClick={() => navigate("/plans")}
             >
               JOIN NOW

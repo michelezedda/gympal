@@ -40,7 +40,7 @@ function Trainers() {
           </h3>
           <div className="relative">
             <IoIosArrowDropleftCircle
-              className="absolute left-0 bottom-1/2 cursor-pointer z-1 text-white bg-neutral-800 hover:bg-lime-600 duration-200 ease-in-out rounded-full"
+              className="absolute left-0 bottom-1/2 cursor-pointer z-1 text-white bg-neutral-800 hover:brightness-150 duration-200 ease-in-out rounded-full active:scale-98"
               size={55}
               onClick={handlePrev}
             />
@@ -57,7 +57,7 @@ function Trainers() {
               ))}
             </div>
             <IoIosArrowDroprightCircle
-              className="absolute right-0 bottom-1/2 cursor-pointer z-1 text-white bg-neutral-800 hover:bg-lime-600 duration-200 ease-in-out rounded-full"
+              className="absolute right-0 bottom-1/2 cursor-pointer z-1 text-white bg-neutral-800 hover:brightness-150 duration-200 ease-in-out rounded-full active:scale-98"
               size={55}
               onClick={handleNext}
             />

@@ -1,4 +1,5 @@
-import React from "react";
+import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,6 +17,14 @@ function Footer() {
                 comprehensive program designed to help you reach your fitness
                 goals.
               </p>
+            </div>
+            <div className="flex gap-2 text-2xl">
+              <Link to="https://www.facebook.com/">
+                <FaSquareFacebook className="cursor-pointer hover:text-lime-600 duration-300 ease-in-out" />
+              </Link>
+              <Link to="https://www.instagram.com/">
+                <FaInstagram className="cursor-pointer hover:text-lime-600 duration-300 ease-in-out" />
+              </Link>
             </div>
             <div className="flex items-center basis-1/2">
               Privacy Policy <hr className="h-6 border-1 mx-2" />
