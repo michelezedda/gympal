@@ -99,7 +99,7 @@ function Schedule() {
           },
           {
             className: "CrossFit",
-            time: "6 PM - 5 PM",
+            time: "6 PM - 7 PM",
             trainer: trainers[5],
           },
         ];
