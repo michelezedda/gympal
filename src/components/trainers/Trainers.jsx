@@ -21,16 +21,6 @@ function Trainers() {
     );
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTrainer((prev) =>
-        prev === trainers.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
       <div className="container mx-auto max-w-screen-lg">
