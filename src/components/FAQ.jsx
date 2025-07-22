@@ -16,13 +16,13 @@ function FAQ() {
         <h3 className="text-5xl lg:text-6xl text-neutral-950 font-bold text-center">
           FAQ
         </h3>
-        <div className="flex flex-col gap-10 mt-14 mx-4 w-full">
+        <div className="flex flex-col gap-10 mt-14 w-full">
           {faq.map((faqItem) => {
             const isActive = selected === faqItem.id;
 
             return (
               <div
-                className={`flex flex-col gap-2 border-4 p-4 cursor-pointer md:w-180 lg:w-250 ${
+                className={`flex flex-col gap-2 border-4 p-4 cursor-pointer md:w-180 lg:w-250 mx-2 ${
                   isActive ? "border-lime-600" : "border-neutral-950"
                 }`}
                 key={faqItem.id}
