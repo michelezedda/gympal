@@ -18,6 +18,7 @@ GymPal makes it easy to plan and manage workouts by giving users a seamless way 
   - react-hot-toast (for toast notifications)
   - react-router-dom (for page navigation)
   - react-icons (for UI icons)
+  - Rombo (for smooth and performant animations)
  
 - **Version Control:**
   - Git
