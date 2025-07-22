@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
+import PlansPage from "../pages/PlansPage";
 
 function Checkout() {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ function Checkout() {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.error(
-      `Great job, ${formData.firstName}! If this weren’t a demo, we’d totally be in touch.`
+      `Great job, ${formData.firstName}! If this weren't a demo, we'd totally be in touch.`
     );
   };
 
@@ -34,6 +35,9 @@ function Checkout() {
     scrollToTop();
   }, []);
 
+  if (!selectedPlan) {
+    return <PlansPage />;
+  }
   return (
     <>
       <Navbar />
@@ -50,7 +54,7 @@ function Checkout() {
               </strong>{" "}
               plan is locked in! Get ready to take your fitness journey to the
               next level with GymPal. Just one last step — fill out the form,
-              and we’ll be in touch to help you get started.
+              and we'll be in touch to help you get started.
             </p>
           </div>
           <div className="mt-8 flex flex-col">
