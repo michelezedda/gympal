@@ -39,7 +39,7 @@ function Gallery() {
               <img
                 src={gallery[currentPic].img}
                 alt={gallery[currentPic].title}
-                className="max-w-[90vh] max-h-[90vh]"
+                className="max-w-screen max-h-screen md:max-w-[90vh] md:max-h-[90vh]"
               />
             </div>
           </div>
