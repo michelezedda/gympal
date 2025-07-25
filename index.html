@@ -1,24 +1,84 @@
 <!DOCTYPE html>
 <html lang="en_US">
   <head>
+    <!-- Charset & Compatibility -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
-    <link rel="apple-touch-icon" href="/media/apple-touch-icon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="GymPal: your ultimate workout buddy! Track your workouts, stay motivated, and reach your fitness goals."
+    />
+    <meta
+      name="keywords"
+      content="GymPal, workout app, fitness tracker, exercise buddy, workout motivation"
+    />
+    <meta name="author" content="Michele Zedda" />
+    <meta name="designer" content="Michele Zedda - https://michelezedda.com" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gympal-demo.vercel.app/" />
+
+    <!-- Open Graph Meta Tags (Social Sharing) -->
     <meta property="og:title" content="GymPal" />
     <meta
       property="og:description"
-      content="GymPal: your ultimate workout buddy!"
+      content="GymPal: your ultimate workout buddy! Track your workouts, stay motivated, and reach your fitness goals."
     />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gympal-demo.vercel.app/" />
     <meta
       property="og:image"
       content="https://i.ibb.co/3YQsGKyv/cropped-image.png"
     />
-    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="GymPal" />
+    <meta property="og:locale" content="en_US" />
 
+    <!-- PWA / Mobile App Support -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="GymPal" />
+    <meta name="application-name" content="GymPal" />
+    <meta name="theme-color" content="#1f2937" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
+    <link rel="apple-touch-icon" href="/media/apple-touch-icon.png" />
+
+    <!-- Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page Title -->
     <title>GymPal</title>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "GymPal",
+        "url": "https://gympal-demo.vercel.app",
+        "image": "https://i.ibb.co/3YQsGKyv/cropped-image.png",
+        "description": "GymPal: your ultimate workout buddy! Track your workouts, stay motivated, and reach your fitness goals.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "author": {
+          "@type": "Person",
+          "name": "Michele Zedda"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
