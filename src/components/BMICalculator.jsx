@@ -76,7 +76,7 @@ function BMICalculator() {
               className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
             />
             <button
-              className={`hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-10 font-semibold bg-neutral-800`}
+              className={`hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-2 font-semibold bg-neutral-800`}
             >
               CALCULATE
             </button>
