@@ -26,41 +26,39 @@ function BMICalculator() {
   return (
     <>
       <div className="container mx-auto max-w-screen-lg">
-        <div className="flex flex-col place-items-center mt-34 2xl:mt-40">
+        <div className="flex flex-col place-items-center mt-34 2xl:mt-40 mx-4">
           <h3 className="text-4xl lg:text-6xl text-lime-600 font-bold mb-8">
             CALCULATE YOUR BMI
           </h3>
           <form
-            className="flex flex-col justify-center gap-2 mx-4"
+            className="flex flex-col justify-center gap-2 w-full"
             onSubmit={handleSubmit}
           >
-            <div className="flex gap-2">
-              <input
-                type="number"
-                name="feet"
-                placeholder="feet"
-                value={imperialForm.feet}
-                onChange={(e) =>
-                  setImperialForm({ ...imperialForm, feet: e.target.value })
-                }
-                required
-                className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500 w-full"
-              />
-              <input
-                type="number"
-                name="inches"
-                placeholder="inches"
-                value={imperialForm.inches}
-                onChange={(e) =>
-                  setImperialForm({
-                    ...imperialForm,
-                    inches: e.target.value,
-                  })
-                }
-                required
-                className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
-              />
-            </div>
+            <input
+              type="number"
+              name="feet"
+              placeholder="feet"
+              value={imperialForm.feet}
+              onChange={(e) =>
+                setImperialForm({ ...imperialForm, feet: e.target.value })
+              }
+              required
+              className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
+            />
+            <input
+              type="number"
+              name="inches"
+              placeholder="inches"
+              value={imperialForm.inches}
+              onChange={(e) =>
+                setImperialForm({
+                  ...imperialForm,
+                  inches: e.target.value,
+                })
+              }
+              required
+              className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
+            />
             <input
               type="number"
               name="pounds"
@@ -107,7 +105,7 @@ function BMICalculator() {
                 </p>
                 <p
                   className={`py-2 px-8 flex justify-between ${
-                    BMI <= 25 && BMI >= 29.9
+                    BMI >= 25 && BMI <= 29.9
                       ? "bg-lime-600 animate-pulse font-semibold"
                       : "bg-neutral-800"
                   }`}
