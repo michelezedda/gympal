@@ -31,7 +31,7 @@ function BMICalculator() {
             CALCULATE YOUR BMI
           </h3>
           <form
-            className="flex flex-col justify-center gap-2"
+            className="flex flex-col justify-center gap-2 mx-4"
             onSubmit={handleSubmit}
           >
             <div className="flex gap-2">
@@ -44,7 +44,7 @@ function BMICalculator() {
                   setImperialForm({ ...imperialForm, feet: e.target.value })
                 }
                 required
-                className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
+                className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500 w-full"
               />
               <input
                 type="number"
@@ -73,7 +73,7 @@ function BMICalculator() {
                 })
               }
               required
-              className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500"
+              className="flex flex-col gap-2 border-4 p-4 cursor-pointer border-neutral-500 w-full"
             />
             <button
               className={`hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-2 font-semibold bg-neutral-800`}
@@ -82,11 +82,11 @@ function BMICalculator() {
             </button>
           </form>
           {BMI ? (
-            <div className="mt-4 flex flex-col justify-center items-center">
-              <h4 className="my-4 text-2xl font-semibold text-neutral-300">
+            <div className="mt-4 flex flex-col items-center">
+              <h4 className="my-4 text-3xl lg:text-4xl font-semibold text-neutral-300">
                 Your BMI: <span className="font-bold text-lime-600">{BMI}</span>
               </h4>
-              <div className="flex flex-col w-100 gap-2">
+              <div className="flex flex-col w-100 gap-2 text-xl lg:text-2xl">
                 <p
                   className={`py-2 px-8 flex justify-between ${
                     BMI < 18.5
