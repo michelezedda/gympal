@@ -8,6 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import { useAppContext } from "./context/AppContext";
 import { useEffect } from "react";
+import BMICalculator from "./components/BMICalculator";
 
 function Home() {
   const { scrollToTop } = useAppContext();
@@ -23,6 +24,7 @@ function Home() {
       <Trainers />
       <Plans />
       <Gallery />
+      <BMICalculator />
       <FAQ />
       <Banner />
       <Footer />
