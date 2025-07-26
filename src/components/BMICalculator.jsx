@@ -80,52 +80,52 @@ function BMICalculator() {
             >
               CALCULATE
             </button>
-            {BMI && (
-              <div className="mt-4 flex flex-col justify-center items-center">
-                <h4 className="my-4 text-2xl font-bold text-neutral-300">
-                  Your BMI: {BMI}
-                </h4>
-                <div className="flex flex-col w-100 gap-2">
-                  <p
-                    className={`py-2 px-8 flex justify-between ${
-                      BMI < 18.5
-                        ? "bg-lime-600 animate-pulse font-bold"
-                        : "bg-neutral-800"
-                    }`}
-                  >
-                    Underweight <span>{"< 18.5"}</span>
-                  </p>
-                  <p
-                    className={`py-2 px-8 flex justify-between ${
-                      BMI >= 18.5 && BMI <= 24.9
-                        ? "bg-lime-600 animate-pulse font-bold"
-                        : "bg-neutral-800"
-                    }`}
-                  >
-                    Healthy Weight <span>18.5 - 24.9</span>
-                  </p>
-                  <p
-                    className={`py-2 px-8 flex justify-between ${
-                      BMI <= 25 && BMI >= 29.9
-                        ? "bg-lime-600 animate-pulse font-bold"
-                        : "bg-neutral-800"
-                    }`}
-                  >
-                    Overweight <span>25 - 29.9</span>
-                  </p>
-                  <p
-                    className={`py-2 px-8 flex justify-between ${
-                      BMI >= 30
-                        ? "bg-lime-600 animate-pulse font-bold"
-                        : "bg-neutral-800"
-                    }`}
-                  >
-                    Obesity <span>{"> 30"}</span>
-                  </p>
-                </div>
-              </div>
-            )}
           </form>
+          {BMI ? (
+            <div className="mt-4 flex flex-col justify-center items-center">
+              <h4 className="my-4 text-2xl font-semibold text-neutral-300">
+                Your BMI: <span className="font-bold text-lime-600">{BMI}</span>
+              </h4>
+              <div className="flex flex-col w-100 gap-2">
+                <p
+                  className={`py-2 px-8 flex justify-between ${
+                    BMI < 18.5
+                      ? "bg-lime-600 animate-pulse font-semibold"
+                      : "bg-neutral-800"
+                  }`}
+                >
+                  Underweight <span>{"< 18.5"}</span>
+                </p>
+                <p
+                  className={`py-2 px-8 flex justify-between ${
+                    BMI >= 18.5 && BMI <= 24.9
+                      ? "bg-lime-600 animate-pulse font-semibold"
+                      : "bg-neutral-800"
+                  }`}
+                >
+                  Healthy Weight <span>18.5 - 24.9</span>
+                </p>
+                <p
+                  className={`py-2 px-8 flex justify-between ${
+                    BMI <= 25 && BMI >= 29.9
+                      ? "bg-lime-600 animate-pulse font-semibold"
+                      : "bg-neutral-800"
+                  }`}
+                >
+                  Overweight <span>25 - 29.9</span>
+                </p>
+                <p
+                  className={`py-2 px-8 flex justify-between ${
+                    BMI >= 30
+                      ? "bg-lime-600 animate-pulse font-semibold"
+                      : "bg-neutral-800"
+                  }`}
+                >
+                  Obesity <span>{"> 30"}</span>
+                </p>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
