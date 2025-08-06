@@ -1,6 +1,7 @@
 import { useAppContext } from "../../context/AppContext";
+import type { PlanCardProps } from "../../types/types.tsx";
 
-function PlanCard({ plan }) {
+function PlanCard({ plan }: PlanCardProps) {
   const { setSelectedPlan, setIsContactFormOpen } = useAppContext();
 
   // Set the selected plan and navigate to the checkout page
@@ -12,7 +13,7 @@ function PlanCard({ plan }) {
   return (
     <>
       <div className="relative flex flex-col place-items-center w-78.5 h-90">
-        <img src={plan.img} alt={plan.name} />
+        <img src={plan.img} alt={plan.title} />
         {plan.best && (
           <span className="absolute top-37 px-2 z-1 bg-lime-600">
             BEST CHOICE

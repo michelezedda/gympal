@@ -1,8 +1,9 @@
 import { useState } from "react";
 import ContactForm from "../../components/ContactForm";
 import { useAppContext } from "../../context/AppContext";
+import type { ClassCardProps } from "../../types/types.tsx";
 
-function CCard({ c }) {
+function CCard({ c }: ClassCardProps) {
   const [loaded, setLoaded] = useState(false);
   const { isContactFormOpen, setIsContactFormOpen } = useAppContext();
 

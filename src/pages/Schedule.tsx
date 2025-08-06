@@ -6,9 +6,10 @@ import trainers from "../data/trainers";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 import ContactForm from "../components/ContactForm";
+import type { Days, ScheduleClass } from "../types/types.tsx";
 
 function Schedule() {
-  const days = [
+  const days: Days[] = [
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -17,7 +18,7 @@ function Schedule() {
     "Saturday",
   ];
 
-  const [day, setDay] = useState(days[0]);
+  const [day, setDay] = useState<Days>(days[0]);
   const { scrollToTop, isContactFormOpen, setIsContactFormOpen } =
     useAppContext();
 
@@ -27,7 +28,7 @@ function Schedule() {
   }, []);
 
   // Function to display class info based on the selected day
-  const displayInfo = (day) => {
+  const displayInfo = (day: Days) => {
     switch (day) {
       case "Monday":
         return [
@@ -143,7 +144,7 @@ function Schedule() {
       {isContactFormOpen && <ContactForm />}
       <Navbar />
       <div className="mx-auto max-w-screen-lg grid grid-cols-3 md:flex mt-34 gap-2 justify-center px-4">
-        {days.map((d) => (
+        {days.map((d: Days) => (
           <button
             key={d}
             className={`text-neutral-950 duration-300 shadow-md shadow-neutral-950 px-4 py-2 cursor-pointer active:scale-98 md:text-xl lg:text-2xl font-semibold ${
@@ -157,7 +158,7 @@ function Schedule() {
       </div>
       <div className="flex flex-col text-xl mt-6 py-4 mx-auto max-w-screen-lg ">
         {classes.length > 0 ? (
-          classes.map((c, index) => (
+          classes.map((c: ScheduleClass, index: number) => (
             <div
               key={index}
               className="flex p-10 items-center border-b-1 border-neutral-600"

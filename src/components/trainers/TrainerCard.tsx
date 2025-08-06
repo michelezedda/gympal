@@ -1,7 +1,8 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import type { TrainerCardProps } from "../../types/types.tsx";
 
-function TrainersCard({ trainer }) {
+function TrainersCard({ trainer }: TrainerCardProps) {
   return (
     <>
       <div className="flex relative">

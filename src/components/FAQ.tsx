@@ -1,11 +1,12 @@
 import { useState } from "react";
 import faq from "../data/faq";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import type { FaqItem } from "../types/types.tsx";
 
 function FAQ() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<number | null>(null);
 
-  const handleSelection = (currentId) => {
+  const handleSelection = (currentId: number) => {
     setSelected(currentId === selected ? null : currentId);
   };
 
@@ -16,7 +17,7 @@ function FAQ() {
           FAQ
         </h3>
         <div className="flex flex-col gap-4 mt-10 w-full">
-          {faq.map((faqItem) => (
+          {faq.map((faqItem: FaqItem) => (
             <div
               className={`flex flex-col gap-2 border-4 p-4 cursor-pointer md:w-180 lg:w-250 ${
                 selected === faqItem.id

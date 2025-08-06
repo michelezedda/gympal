@@ -1,17 +1,18 @@
 import { useState } from "react";
+import type { ImperialForm, MetricForm } from "../types/types.tsx";
 
 function BMICalculator() {
-  const [unit, setUnit] = useState("imperial");
-  const [imperialForm, setImperialForm] = useState({
+  const [unit, setUnit] = useState<string>("imperial");
+  const [imperialForm, setImperialForm] = useState<ImperialForm>({
     feet: "",
     inches: "",
     pounds: "",
   });
-  const [metricForm, setMetricForm] = useState({
+  const [metricForm, setMetricForm] = useState<MetricForm>({
     centimeters: "",
     kilograms: "",
   });
-  const [BMI, setBMI] = useState(null);
+  const [BMI, setBMI] = useState<number | null>(null);
 
   const calculateBMI = () => {
     if (unit === "imperial") {
@@ -21,7 +22,7 @@ function BMICalculator() {
 
       const totalInches = feet * 12 + inches;
       const bmi = (pounds * 703) / totalInches ** 2;
-      setBMI(bmi.toFixed(1));
+      setBMI(Number(bmi.toFixed(1)));
       setImperialForm({
         feet: "",
         inches: "",
@@ -32,7 +33,7 @@ function BMICalculator() {
       const kg = Number(metricForm.kilograms);
 
       const bmi = kg / (cm / 100) ** 2;
-      setBMI(bmi.toFixed(1));
+      setBMI(Number(bmi.toFixed(1)));
       setMetricForm({
         centimeters: "",
         kilograms: "",
@@ -44,7 +45,7 @@ function BMICalculator() {
     setUnit(unit === "imperial" ? "metric" : "imperial");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     calculateBMI();
   };

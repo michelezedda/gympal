@@ -1,12 +1,13 @@
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import { IoMdClose } from "react-icons/io";
 import plans from "../data/plans";
 import classes from "../data/classes";
+import type { FormData, Plan, Class } from "../types/types.tsx";
 
 function ContactForm() {
-  const [completed, setCompleted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [completed, setCompleted] = useState<boolean>(false);
+  const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
     location: "",
@@ -18,7 +19,7 @@ function ContactForm() {
   const { setIsContactFormOpen } = useAppContext();
 
   // Toaster
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setCompleted(true);
   };
@@ -106,7 +107,7 @@ function ContactForm() {
                   <option value="" selected className="text-neutral-500">
                     -- Select a plan (optional) --
                   </option>
-                  {plans.map((plan) => (
+                  {plans.map((plan: Plan) => (
                     <option
                       key={plan.id}
                       value={plan.title}
@@ -129,7 +130,7 @@ function ContactForm() {
                   <option value="" selected className="text-neutral-500">
                     -- Select a class (optional) --
                   </option>
-                  {classes.map((c) => (
+                  {classes.map((c: Class) => (
                     <option key={c.id} value={c.name} className="text-black">
                       {c.name}
                     </option>
@@ -138,7 +139,6 @@ function ContactForm() {
                 <label htmlFor="message">Message: </label>
                 <textarea
                   id="message"
-                  type="message"
                   name="message"
                   placeholder="Your message (optional)"
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"

@@ -5,9 +5,10 @@ import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
+import type { Trainer } from "../../types/types.tsx";
 
 function Trainers() {
-  const [currentTrainer, setCurrentTrainer] = useState(0);
+  const [currentTrainer, setCurrentTrainer] = useState<number>(0);
 
   const handlePrev = () => {
     setCurrentTrainer(
@@ -35,7 +36,7 @@ function Trainers() {
               onClick={handlePrev}
             />
             <div className="flex mx-6 mt-10">
-              {trainers.map((trainer, index) => (
+              {trainers.map((trainer: Trainer, index: number) => (
                 <div
                   key={trainer.id}
                   className={`${

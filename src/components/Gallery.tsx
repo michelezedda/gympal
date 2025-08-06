@@ -1,10 +1,11 @@
 import { useState } from "react";
 import gallery from "../data/gallery";
 import { IoClose } from "react-icons/io5";
+import type { GalleryItem } from "../types/types.tsx";
 
 function Gallery() {
-  const [selected, setSelected] = useState(false);
-  const [currentPic, setCurrentPic] = useState(0);
+  const [selected, setSelected] = useState<boolean>(false);
+  const [currentPic, setCurrentPic] = useState<number>(0);
 
   return (
     <div className="container mx-auto max-w-screen-lg">
@@ -13,7 +14,7 @@ function Gallery() {
           TAKE A CLOSER LOOK
         </h3>
         <div className="grid grid-cols-2 gap-1">
-          {gallery.map((galleryItem, index) => (
+          {gallery.map((galleryItem: GalleryItem, index: number) => (
             <img
               key={galleryItem.id}
               src={galleryItem.img}

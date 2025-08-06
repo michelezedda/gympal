@@ -1,5 +1,6 @@
-import PlanCard from "../plans/PlanCard";
+import PlanCard from "./PlanCard";
 import plans from "../../data/plans";
+import type { Plan } from "../../types/types.tsx";
 
 function Plans() {
   return (
@@ -13,7 +14,7 @@ function Plans() {
             CHOOSE THE RIGHT PLAN FOR YOUR NEEDS
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-40 gap-x-10 mt-10 mb-20">
-            {plans.map((plan) => (
+            {plans.map((plan: Plan) => (
               <div key={plan.id}>
                 <PlanCard plan={plan} />
               </div>

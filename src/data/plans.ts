@@ -6,7 +6,7 @@ const plans = [
   {
     id: 0,
     title: "Lite",
-    perks: "Gym access only",
+    perks: ["Gym access only"],
     price: 44.98,
     img: litePic,
     best: false,
