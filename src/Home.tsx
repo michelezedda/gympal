@@ -24,9 +24,9 @@ function Home() {
       <Navbar />
       <Hero />
       <Trainers />
-      <Plans />
       <Gallery />
       <BMICalculator />
+      <Plans />
       <FAQ />
       <Banner />
       <Footer />
