@@ -13,6 +13,7 @@ GymPal makes it easy to plan and manage workouts by giving users a seamless way 
 
 - **Frontend:**
   - React
+  - TypeScript
   - Tailwind CSS
   - Vite (for faster builds)
   - react-router-dom (for page navigation)
