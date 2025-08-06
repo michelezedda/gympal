@@ -19,7 +19,7 @@ function PlanCard({ plan }) {
           </span>
         )}
         <div
-          className={`absolute -bottom-30 flex flex-col justify-center items-center bg-neutral-950 py-4 px-10 w-72 h-80 ${
+          className={`absolute -bottom-30 flex flex-col justify-center items-center bg-neutral-950 py-4 px-10 w-72 h-80 shadow-lg ${
             plan.best && "border border-lime-600"
           }`}
         >

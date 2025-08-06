@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import { IoMdClose } from "react-icons/io";
 import plans from "../data/plans";
@@ -16,14 +16,6 @@ function ContactForm() {
   });
 
   const { setIsContactFormOpen } = useAppContext();
-
-  // Handle form data
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   // Toaster
   const handleSubmit = (e) => {
@@ -61,7 +53,9 @@ function ContactForm() {
                   placeholder="Your full name"
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                   value={formData.fullName}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, fullName: e.target.value })
+                  }
                   minLength={3}
                   required
                 />
@@ -73,7 +67,9 @@ function ContactForm() {
                   placeholder="Your e-mail"
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                 />
                 <label htmlFor="location">Location:</label>
@@ -81,7 +77,9 @@ function ContactForm() {
                   name="location"
                   id="location"
                   value={formData.location}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, location: e.target.value })
+                  }
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                   required
                 >
@@ -100,14 +98,13 @@ function ContactForm() {
                   name="plan"
                   id="plan"
                   value={formData.plan}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, plan: e.target.value })
+                  }
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                 >
-                  <option value="" selected disabled>
+                  <option value="" selected className="text-neutral-500">
                     -- Select a plan (optional) --
-                  </option>
-                  <option value="none" className="text-black">
-                    None
                   </option>
                   {plans.map((plan) => (
                     <option
@@ -124,14 +121,13 @@ function ContactForm() {
                   name="class"
                   id="class"
                   value={formData.class}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, class: e.target.value })
+                  }
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                 >
-                  <option value="" selected disabled>
+                  <option value="" selected className="text-neutral-500">
                     -- Select a class (optional) --
-                  </option>
-                  <option value="none" className="text-black">
-                    None
                   </option>
                   {classes.map((c) => (
                     <option key={c.id} value={c.name} className="text-black">
@@ -147,7 +143,9 @@ function ContactForm() {
                   placeholder="Your message (optional)"
                   className="border-2 border-white px-2 py-1 focus:outline-lime-600"
                   value={formData.message}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 />
                 {completed ? (
                   <div className="bg-lime-600 text-neutral-950 px-4 py-2 font-semibold mt-8 text-md xl:text-xl mb-4">
