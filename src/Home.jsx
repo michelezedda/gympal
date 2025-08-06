@@ -9,9 +9,10 @@ import Footer from "./components/Footer";
 import { useAppContext } from "./context/AppContext";
 import { useEffect } from "react";
 import BMICalculator from "./components/BMICalculator";
+import ContactForm from "./components/ContactForm";
 
 function Home() {
-  const { scrollToTop } = useAppContext();
+  const { scrollToTop, isContactFormOpen } = useAppContext();
 
   // Scroll to top
   useEffect(() => {
@@ -19,6 +20,7 @@ function Home() {
   }, []);
   return (
     <>
+      {isContactFormOpen && <ContactForm />}
       <Navbar />
       <Hero />
       <Trainers />

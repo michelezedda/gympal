@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../context/AppContext";
 
 function PlanCard({ plan }) {
-  const navigate = useNavigate();
-  const { setSelectedPlan } = useAppContext();
+  const { setSelectedPlan, setIsContactFormOpen } = useAppContext();
 
   // Set the selected plan and navigate to the checkout page
   const handleClick = () => {
     setSelectedPlan(plan);
-    navigate("/checkout");
+    setIsContactFormOpen(true);
   };
 
   return (

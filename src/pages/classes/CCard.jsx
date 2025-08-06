@@ -1,18 +1,14 @@
-import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import ContactForm from "../../components/ContactForm";
+import { useAppContext } from "../../context/AppContext";
 
 function CCard({ c }) {
   const [loaded, setLoaded] = useState(false);
-
-  // Toaster
-  const handleClick = () => {
-    toast.error(
-      "Demo mode: Activated. Scheduling classes: Deactivated. Your gains: Pending."
-    );
-  };
+  const { isContactFormOpen, setIsContactFormOpen } = useAppContext();
 
   return (
     <>
+      {isContactFormOpen && <ContactForm />}
       <div className="relative">
         <img
           src={c.img}
@@ -32,13 +28,12 @@ function CCard({ c }) {
           </p>
           <button
             className="absolute bottom-7 left-1/2 -translate-x-1/2 w-[90%] text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 py-4 cursor-pointer shadow-md shadow-neutral-900 active:scale-98 font-semibold text-sm xl:text-lg"
-            onClick={handleClick}
+            onClick={() => setIsContactFormOpen(true)}
           >
             SCHEDULE NOW
           </button>
         </div>
       </div>
-      <Toaster />
     </>
   );
 }

@@ -55,11 +55,11 @@ function Navbar() {
                   CLASSES
                 </li>
               </Link>
-              <Link to={"/plans"}>
+              <a href="#plans">
                 <li className="cursor-pointer hover:text-neutral-500 duration-200">
                   PLANS
                 </li>
-              </Link>
+              </a>
               <Link to={"/schedule"}>
                 <li className="cursor-pointer  hover:text-neutral-500 duration-200">
                   SCHEDULE

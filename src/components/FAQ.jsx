@@ -15,7 +15,7 @@ function FAQ() {
         <h3 className="text-3xl md:text-5xl text-neutral-950 font-bold text-center">
           FAQ
         </h3>
-        <div className="flex flex-col gap-10 mt-14 w-full">
+        <div className="flex flex-col gap-4 mt-10 w-full">
           {faq.map((faqItem) => (
             <div
               className={`flex flex-col gap-2 border-4 p-4 cursor-pointer md:w-180 lg:w-250 ${

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import trainers from "../data/trainers";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
-import toast, { Toaster } from "react-hot-toast";
+import ContactForm from "../components/ContactForm";
 
 function Schedule() {
   const days = [
@@ -18,19 +18,13 @@ function Schedule() {
   ];
 
   const [day, setDay] = useState(days[0]);
-  const { scrollToTop } = useAppContext();
+  const { scrollToTop, isContactFormOpen, setIsContactFormOpen } =
+    useAppContext();
 
   // Scroll to top
   useEffect(() => {
     scrollToTop();
   }, []);
-
-  // Toaster
-  const handleClick = () => {
-    toast.error(
-      "Demo mode: Activated. Scheduling classes: Deactivated. Your gains: Pending."
-    );
-  };
 
   // Function to display class info based on the selected day
   const displayInfo = (day) => {
@@ -146,6 +140,7 @@ function Schedule() {
 
   return (
     <>
+      {isContactFormOpen && <ContactForm />}
       <Navbar />
       <div className="mx-auto max-w-screen-lg grid grid-cols-3 md:flex mt-34 gap-2 justify-center px-4">
         {days.map((d) => (
@@ -181,7 +176,7 @@ function Schedule() {
                 </div>
                 <button
                   className="text-neutral-950 bg-neutral-400 hover:bg-lime-600 duration-300 shadow-md shadow-neutral-950 px-4 py-2 cursor-pointer active:scale-98 font-semibold mt-10 lg:mt-0 basis-1/4"
-                  onClick={handleClick}
+                  onClick={() => setIsContactFormOpen(true)}
                 >
                   SCHEDULE NOW
                 </button>
@@ -194,7 +189,6 @@ function Schedule() {
       </div>
       <Banner />
       <Footer />
-      <Toaster />
     </>
   );
 }
