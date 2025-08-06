@@ -15,7 +15,6 @@ GymPal makes it easy to plan and manage workouts by giving users a seamless way 
   - React
   - Tailwind CSS
   - Vite (for faster builds)
-  - react-hot-toast (for toast notifications)
   - react-router-dom (for page navigation)
   - react-icons (for UI icons)
  
