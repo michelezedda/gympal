@@ -16,7 +16,7 @@ function About() {
       <Navbar />
       <div className="mx-auto max-w-screen-lg flex flex-col gap-6 items-center justify-center mt-40 mb-20">
         <div className="flex flex-col items-center flex-between mx-4">
-          <h2 className="text-4xl lg:text-6xl font-bold text-lime-600 text-center mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-lime-600 text-center mb-6">
             A FEW WORDS ABOUT THE CLUB
           </h2>
           <div className="flex flex-col lg:flex-row justify-center items-center">

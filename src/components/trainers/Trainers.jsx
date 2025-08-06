@@ -25,7 +25,7 @@ function Trainers() {
     <>
       <div className="container mx-auto max-w-screen-lg">
         <div className="flex flex-col place-items-center mt-20">
-          <h3 className="text-4xl sm:text-5xl lg:text-6xl text-lime-600 font-bold mb-10">
+          <h3 className="text-3xl md:text-5xl text-lime-600 font-bold mb-10">
             MEET OUR TRAINERS
           </h3>
           <div className="relative">
