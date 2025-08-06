@@ -2,13 +2,22 @@ import { Link } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   // Function to toggle menu
   const handleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
+  };
+
+  const goToPlans = () => {
+    navigate("/#plans");
+    document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -55,8 +64,11 @@ function Navbar() {
                   CLASSES
                 </li>
               </Link>
-              <a href="#plans">
-                <li className="cursor-pointer hover:text-neutral-500 duration-200">
+              <a href="/#plans">
+                <li
+                  className="cursor-pointer hover:text-neutral-500 duration-200"
+                  onClick={goToPlans}
+                >
                   PLANS
                 </li>
               </a>
@@ -84,11 +96,14 @@ function Navbar() {
                 Classes
               </li>
             </Link>
-            <Link to={"/plans"}>
-              <li className="cursor-pointer hover:text-neutral-500 duration-200">
+            <a href="/#plans">
+              <li
+                className="cursor-pointer hover:text-neutral-500 duration-200"
+                onClick={goToPlans}
+              >
                 Plans
               </li>
-            </Link>
+            </a>
             <Link to={"/schedule"}>
               <li className="cursor-pointer  hover:text-neutral-500 duration-200">
                 Schedule
