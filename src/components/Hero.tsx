@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoPlaySharp } from "react-icons/io5";
 import { useNavigate, Link } from "react-router-dom";
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import Cards from "./Cards";
@@ -31,10 +31,10 @@ function Hero() {
               JOIN NOW
             </button>
             <button
-              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
+              className="py-2 px-4 bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
               onClick={handleClick}
             >
-              WATCH VIDEO
+              <IoPlaySharp />
             </button>
           </div>
           <div className="hidden lg:absolute lg:flex lg:flex-col lg:bottom-2 lg:-right-15 lg:gap-2">
