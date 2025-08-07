@@ -28,8 +28,9 @@ function Home() {
       <BMICalculator />
       <Plans />
       <FAQ />
-      {/* <Banner /> */}
-      <OpenStreetMap />
+      <div className="mt-30">
+        <OpenStreetMap />
+      </div>
       <Footer />
     </>
   );
