@@ -32,7 +32,8 @@ export type Days =
   | "Wednesday"
   | "Thursday"
   | "Friday"
-  | "Saturday";
+  | "Saturday"
+  | undefined;
 
 export type ImperialForm = {
   feet: string;
@@ -50,6 +51,11 @@ export type Trainer = {
   name: string;
   class: string;
   pic: string;
+};
+
+export type Location = {
+  id: number;
+  street: string;
 };
 
 export type GalleryItem = {
@@ -72,11 +78,9 @@ export type Class = {
 };
 
 export type ScheduleClass = {
-  className: string;
+  cName: string;
   time: string;
-  trainer: {
-    name: string;
-  };
+  trainer: Trainer | undefined;
 };
 
 export type ClassCardProps = {

@@ -10,9 +10,9 @@ function Gallery() {
   return (
     <div className="container mx-auto max-w-screen-lg">
       <div className="flex flex-col place-items-center mt-34 2xl:mt-40">
-        <h3 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
+        <h2 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
           TAKE A CLOSER LOOK
-        </h3>
+        </h2>
         <div className="grid grid-cols-2 gap-1">
           {gallery.map((galleryItem: GalleryItem, index: number) => (
             <img

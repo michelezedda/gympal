@@ -4,12 +4,12 @@ import Trainers from "./components/trainers/Trainers";
 import Plans from "./components/plans/Plans";
 import Gallery from "./components/Gallery";
 import FAQ from "./components/FAQ";
-import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import { useAppContext } from "./context/AppContext";
 import { useEffect } from "react";
 import BMICalculator from "./components/BMICalculator";
 import ContactForm from "./components/ContactForm";
+import OpenStreetMap from "./components/OpenStreetMap";
 
 function Home() {
   const { scrollToTop, isContactFormOpen } = useAppContext();
@@ -28,7 +28,8 @@ function Home() {
       <BMICalculator />
       <Plans />
       <FAQ />
-      <Banner />
+      {/* <Banner /> */}
+      <OpenStreetMap />
       <Footer />
     </>
   );

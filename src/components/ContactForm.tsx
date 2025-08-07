@@ -3,7 +3,8 @@ import { useAppContext } from "../context/AppContext";
 import { IoMdClose } from "react-icons/io";
 import plans from "../data/plans";
 import classes from "../data/classes";
-import type { FormData, Plan, Class } from "../types/types.tsx";
+import type { FormData, Plan, Class, Location } from "../types/types.tsx";
+import locations from "../data/locations";
 
 function ContactForm() {
   const [completed, setCompleted] = useState<boolean>(false);
@@ -87,12 +88,15 @@ function ContactForm() {
                   <option value="" selected disabled>
                     -- Select a location --
                   </option>
-                  <option value="Santa Monica" className="text-black">
-                    Santa Monica
-                  </option>
-                  <option value="Santa Monica" className="text-black">
-                    Los Angeles
-                  </option>
+                  {locations.map((location: Location) => (
+                    <option
+                      key={location.id}
+                      value={location.street}
+                      className="text-black"
+                    >
+                      {location.street}
+                    </option>
+                  ))}
                 </select>
                 <label htmlFor="plan">Plan: </label>
                 <select

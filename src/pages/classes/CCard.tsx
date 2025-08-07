@@ -21,9 +21,9 @@ function CCard({ c }: ClassCardProps) {
           onLoad={() => setLoaded(true)}
         />
         <div className="flex text-center gap-2 flex-col p-2">
-          <h4 className="absolute w-full top-3 left-1/2 -translate-x-1/2 text-xl xl:text-2xl font-semibold">
+          <h3 className="absolute w-full top-3 left-1/2 -translate-x-1/2 text-xl xl:text-2xl font-semibold">
             {c.name}
-          </h4>
+          </h3>
           <p className="absolute top-17 w-full p-1 left-1/2 -translate-x-1/2 text-sm sm:text-lg">
             {c.description}
           </p>

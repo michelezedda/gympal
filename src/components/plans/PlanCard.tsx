@@ -25,9 +25,9 @@ function PlanCard({ plan }: PlanCardProps) {
             </span>
           )}
           <div className="absolute -bottom-30 flex flex-col justify-center items-center bg-neutral-950 py-4 px-10 w-64 h-80">
-            <h4 className="absolute top-5 font-bold text-xl mb-2">
+            <h3 className="absolute top-5 font-bold text-xl mb-2">
               {plan.title.toUpperCase()}
-            </h4>
+            </h3>
             <span className="absolute top-15 text-2xl mb-6">
               $<span className="text-5xl font-bold"> {plan.price} </span>p/m
             </span>

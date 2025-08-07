@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Banner from "../../components/Banner";
+import OpenStreetMap from "../../components/OpenStreetMap";
 import classes from "../../data/classes";
 import { useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
@@ -21,9 +21,9 @@ function Classes() {
     <>
       <Navbar />
       <div className="mx-auto max-w-screen-lg flex flex-col justify-center items-center mt-30 mb-20">
-        <h2 className="text-lime-600 text-3xl md:text-5xl font-bold mb-10 text-center mx-6">
+        <h1 className="text-lime-600 text-3xl md:text-5xl font-bold mb-10 text-center mx-6">
           WORKOUTS DESIGNED FOR YOU
-        </h2>
+        </h1>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 mx-6 w-full">
           {classes.map((c) => (
             <div key={c.id}>
@@ -34,7 +34,7 @@ function Classes() {
           ))}
         </div>
       </div>
-      <Banner />
+      <OpenStreetMap />
       <Footer />
     </>
   );

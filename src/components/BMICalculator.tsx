@@ -54,9 +54,9 @@ function BMICalculator() {
     <>
       <div id="bmi" className="container mx-auto max-w-screen-lg">
         <div className="flex flex-col place-items-center mt-34 2xl:mt-40 mx-4">
-          <h3 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
             CALCULATE YOUR BMI
-          </h3>
+          </h2>
           <button
             onClick={handleUnit}
             className="hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-2 font-semibold bg-neutral-800 w-full mb-2"

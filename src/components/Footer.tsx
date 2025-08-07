@@ -1,5 +1,6 @@
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import locations from "../data/locations";
 
 function Footer() {
   return (
@@ -33,9 +34,10 @@ function Footer() {
           </div>
           <div className="flex flex-col lg:flex-row gap-8 mt-8">
             <div className="flex flex-col gap-2 basis-1/2">
-              <p className="font-semibold text-lg">Our Locations</p>
-              <span>1234 Palm Drive, Santa Monica, CA 90401, USA</span>
-              <span>2815 West Melrose Avenue, Los Angeles, CA 90026, USA</span>
+              <h4 className="font-semibold text-lg">Our Locations</h4>
+              {locations.map((location) => (
+                <span key={location.id}>{location.street}</span>
+              ))}
             </div>
             <div className="basis-1/2">
               <ul>

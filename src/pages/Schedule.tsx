@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import trainers from "../data/trainers";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 import ContactForm from "../components/ContactForm";
 import type { Days, ScheduleClass } from "../types/types.tsx";
+import OpenStreetMap from "../components/OpenStreetMap";
 
 function Schedule() {
   const days: Days[] = [
@@ -18,7 +18,7 @@ function Schedule() {
     "Saturday",
   ];
 
-  const [day, setDay] = useState<Days>(days[0]);
+  const [day, setDay] = useState<Days | undefined>(days[0]);
   const { scrollToTop, isContactFormOpen, setIsContactFormOpen } =
     useAppContext();
 
@@ -28,18 +28,18 @@ function Schedule() {
   }, []);
 
   // Function to display class info based on the selected day
-  const displayInfo = (day: Days) => {
+  const displayInfo = (day: Days): ScheduleClass[] => {
     switch (day) {
       case "Monday":
         return [
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "10 AM - 12 AM",
             trainer: trainers[4],
           },
-          { className: "Yoga", time: "2 PM - 3 PM", trainer: trainers[2] },
+          { cName: "Yoga", time: "2 PM - 3 PM", trainer: trainers[2] },
           {
-            className: "Powerlifting",
+            cName: "Powerlifting",
             time: "6 PM - 8 PM",
             trainer: trainers[0],
           },
@@ -47,17 +47,17 @@ function Schedule() {
       case "Tuesday":
         return [
           {
-            className: "Pilates",
+            cName: "Pilates",
             time: "8 AM - 9:30 AM",
             trainer: trainers[1],
           },
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "4 PM - 6 PM",
             trainer: trainers[3],
           },
           {
-            className: "Self-Defense",
+            cName: "Self-Defense",
             time: "8 PM - 9 PM",
             trainer: trainers[5],
           },
@@ -65,17 +65,17 @@ function Schedule() {
       case "Wednesday":
         return [
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "9:30 AM - 10:30 AM",
             trainer: trainers[4],
           },
           {
-            className: "Zumba",
+            cName: "Zumba",
             time: "1 PM - 2 PM",
             trainer: trainers[1],
           },
           {
-            className: "Boxing",
+            cName: "Boxing",
             time: "4 PM - 5:30 PM",
             trainer: trainers[0],
           },
@@ -83,17 +83,17 @@ function Schedule() {
       case "Thursday":
         return [
           {
-            className: "Kickboxing",
+            cName: "Kickboxing",
             time: "10:00 AM - 11:30 AM",
             trainer: trainers[3],
           },
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "3 PM - 5 PM",
             trainer: trainers[1],
           },
           {
-            className: "CrossFit",
+            cName: "CrossFit",
             time: "6 PM - 7 PM",
             trainer: trainers[5],
           },
@@ -101,17 +101,17 @@ function Schedule() {
       case "Friday":
         return [
           {
-            className: "Stretching & Mobility",
+            cName: "Stretching & Mobility",
             time: "11 AM - 12:30 PM",
             trainer: trainers[5],
           },
           {
-            className: "Yoga",
+            cName: "Yoga",
             time: "4 PM - 5 PM",
             trainer: trainers[2],
           },
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "8 PM - 10 PM",
             trainer: trainers[1],
           },
@@ -119,21 +119,23 @@ function Schedule() {
       case "Saturday":
         return [
           {
-            className: "Functional Training",
+            cName: "Functional Training",
             time: "10 AM - 11 AM",
             trainer: trainers[3],
           },
           {
-            className: "Body Building",
+            cName: "Body Building",
             time: "11 AM - 13 PM",
             trainer: trainers[4],
           },
           {
-            className: "Self-Defense",
+            cName: "Self-Defense",
             time: "3 PM - 4 PM",
             trainer: trainers[0],
           },
         ];
+      default:
+        return [];
     }
   };
 
@@ -156,7 +158,7 @@ function Schedule() {
           </button>
         ))}
       </div>
-      <div className="flex flex-col text-xl mt-6 py-4 mx-auto max-w-screen-lg ">
+      <div className="flex flex-col text-xl mt-6 mb-20 py-4 mx-auto max-w-screen-lg">
         {classes.length > 0 ? (
           classes.map((c: ScheduleClass, index: number) => (
             <div
@@ -166,13 +168,14 @@ function Schedule() {
               <div className="w-full flex flex-col lg:flex-row justify-between">
                 <div className="flex justify-between items-center gap-2 basis-3/4">
                   <p className="flex flex-col lg:basis-2/6">
-                    <strong>Class</strong> {c.className}
+                    <strong>Class</strong> {c.cName}
                   </p>
                   <p className="flex flex-col lg:basis-2/6">
                     <strong>Time</strong> {c.time}
                   </p>
                   <p className="flex flex-col lg:basis-2/6">
-                    <strong>Trainer</strong> {c.trainer.name}
+                    <strong>Trainer</strong>
+                    {c.trainer ? c.trainer.name : "TBA"}
                   </p>
                 </div>
                 <button
@@ -188,7 +191,7 @@ function Schedule() {
           <p>No classes available.</p>
         )}
       </div>
-      <Banner />
+      <OpenStreetMap />
       <Footer />
     </>
   );
