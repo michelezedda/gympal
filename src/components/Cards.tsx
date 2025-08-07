@@ -14,7 +14,7 @@ const Cards = () => {
         <SingleCard title="TEAM OF EXPERT COACHES" Icon={MdSportsGymnastics} />
       </a>
       <a href="/#bmi">
-        <SingleCard title="WANNA KNOW YOUR BMI?" Icon={FaWeightScale} />
+        <SingleCard title="WANT TO KNOW YOUR BMI?" Icon={FaWeightScale} />
       </a>
     </div>
   );
