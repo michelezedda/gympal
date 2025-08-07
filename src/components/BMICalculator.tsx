@@ -52,7 +52,7 @@ function BMICalculator() {
 
   return (
     <>
-      <div className="container mx-auto max-w-screen-lg">
+      <div id="bmi" className="container mx-auto max-w-screen-lg">
         <div className="flex flex-col place-items-center mt-34 2xl:mt-40 mx-4">
           <h3 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
             CALCULATE YOUR BMI

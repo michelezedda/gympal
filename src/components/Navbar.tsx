@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed flex md:flex-row top-0 bg-neutral-950 px-4 py-4 lg:py-8 items-center justify-between md:justify-around w-full shadow-sm shadow-black z-30 gap-1">
+      <nav className="fixed flex md:flex-row top-0 bg-neutral-950 px-4 py-4 lg:py-8 items-center justify-between md:justify-around w-full shadow-md z-30 gap-1">
         <Link to={"/"}>
           <div className="flex items-center gap-1">
             <img src="/media/logo.png" alt="GymPal logo" className="h-10" />

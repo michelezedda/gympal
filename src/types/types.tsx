@@ -1,3 +1,5 @@
+import type { IconType } from "react-icons";
+
 export type AppContextType = {
   selectedPlan: Plan | undefined;
   setSelectedPlan: React.Dispatch<React.SetStateAction<Plan | undefined>>;
@@ -87,4 +89,9 @@ export type PlanCardProps = {
 
 export type TrainerCardProps = {
   trainer: Trainer;
+};
+
+export type SingleCardProps = {
+  title: string;
+  Icon: IconType;
 };
