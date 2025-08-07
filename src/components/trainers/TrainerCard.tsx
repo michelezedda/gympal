@@ -6,7 +6,7 @@ function TrainersCard({ trainer }: TrainerCardProps) {
   return (
     <>
       <div className="flex relative">
-        <img src="/media/frame.png" className="pl-[0.5px] h-100 lg:h-120" />
+        <img src="/media/frame.png" className="h-100" />
         <img
           src={trainer.pic}
           alt={trainer.name}

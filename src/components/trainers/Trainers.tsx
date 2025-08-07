@@ -22,6 +22,14 @@ function Trainers() {
     );
   };
 
+  const getVisibleTrainers = (): Trainer[] => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      visible.push(trainers[(currentTrainer + i) % trainers.length]);
+    }
+    return visible;
+  };
+
   return (
     <>
       <div id="trainers" className="container mx-auto max-w-screen-lg">
@@ -35,7 +43,8 @@ function Trainers() {
               size={55}
               onClick={handlePrev}
             />
-            <div className="flex mx-6 mt-10">
+            {/* Mobile view */}
+            <div className="flex lg:hidden mx-6 mt-10">
               {trainers.map((trainer: Trainer, index: number) => (
                 <div
                   key={trainer.id}
@@ -45,6 +54,12 @@ function Trainers() {
                 >
                   <TrainerCard trainer={trainer} />
                 </div>
+              ))}
+            </div>
+            {/* Desktop view */}
+            <div className="hidden lg:flex justify-center gap-6 mx-6 mt-10">
+              {getVisibleTrainers().map((trainer) => (
+                <TrainerCard key={trainer.id} trainer={trainer} />
               ))}
             </div>
             <IoIosArrowDroprightCircle
