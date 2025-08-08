@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { IoClose, IoPlaySharp } from "react-icons/io5";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import Cards from "./Cards";
 
 function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const navigate = useNavigate();
 
   // Function to open the video
   const handleClick = () => {
@@ -24,12 +23,11 @@ function Hero() {
             ELEVATE YOUR SOUL
           </h1>
           <div className="flex mt-16 gap-6 lg:ml-21">
-            <button
-              className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-lg md:text-xl lg:text-2xl"
-              onClick={() => navigate("/plans")}
-            >
-              JOIN NOW
-            </button>
+            <a href="/#plans">
+              <button className="py-2 px-6 bg-neutral-800 hover:bg-lime-700 hover:text-neutral-950 shadow-md shadow-black duration-300 active:scale-98 cursor-pointer text-lg md:text-xl lg:text-2xl">
+                JOIN NOW
+              </button>
+            </a>
             <button
               className="py-2 px-4 bg-neutral-800 hover:bg-lime-700 shadow-md hover:text-neutral-950 shadow-black duration-300 active:scale-98 cursor-pointer text-xl lg:text-2xl"
               onClick={handleClick}
