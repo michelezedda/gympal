@@ -28,7 +28,10 @@ function ContactForm() {
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/80">
-        <div className="relative flex flex-col bg-black pt-20 pb-10 border border-lime-600 shadow-lg shadow-black overflow-y-auto max-h-[95dvh]">
+        <div
+          className="relative flex flex-col bg-black pt-20 pb-10 border border-lime-600 shadow-lg shadow-black
+          overflow-y-auto max-h-[95dvh] max-w-screen-md w-full mx-4"
+        >
           <IoMdClose
             className="absolute top-5 right-5 cursor-pointer"
             size={30}
@@ -53,7 +56,7 @@ function ContactForm() {
                   type="text"
                   name="fullName"
                   placeholder="Your full name"
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                   value={formData.fullName}
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
@@ -61,13 +64,13 @@ function ContactForm() {
                   minLength={3}
                   required
                 />
-                <label htmlFor="email">Full name: </label>
+                <label htmlFor="email">Email: </label>
                 <input
                   id="email"
                   type="email"
                   name="email"
                   placeholder="Your e-mail"
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -82,10 +85,10 @@ function ContactForm() {
                   onChange={(e) =>
                     setFormData({ ...formData, location: e.target.value })
                   }
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                   required
                 >
-                  <option value="" selected disabled>
+                  <option value="" disabled>
                     -- Select a location --
                   </option>
                   {locations.map((location: Location) => (
@@ -106,9 +109,9 @@ function ContactForm() {
                   onChange={(e) =>
                     setFormData({ ...formData, plan: e.target.value })
                   }
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                 >
-                  <option value="" selected className="text-neutral-500">
+                  <option value="" className="text-neutral-500">
                     -- Select a plan (optional) --
                   </option>
                   {plans.map((plan: Plan) => (
@@ -129,9 +132,9 @@ function ContactForm() {
                   onChange={(e) =>
                     setFormData({ ...formData, class: e.target.value })
                   }
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                 >
-                  <option value="" selected className="text-neutral-500">
+                  <option value="" className="text-neutral-500">
                     -- Select a class (optional) --
                   </option>
                   {classes.map((c: Class) => (
@@ -145,7 +148,7 @@ function ContactForm() {
                   id="message"
                   name="message"
                   placeholder="Your message (optional)"
-                  className="border-2 border-white px-2 py-1 focus:outline-lime-600"
+                  className="border-2 border-white px-2 py-1 focus:outline-lime-600 w-full"
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
