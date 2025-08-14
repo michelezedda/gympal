@@ -14,7 +14,7 @@ function Hero() {
 
   return (
     <>
-      <div className="flex relative h-[100dvh] bg-[url(/media/background.webp)] bg-center xl:bg-left bg-cover bg-no-repeat">
+      <section className="flex relative h-[100dvh] bg-[url(/media/background.webp)] bg-center xl:bg-left bg-cover bg-no-repeat">
         <div className="absolute bottom-0 left-0 w-full h-3/4 bg-gradient-to-b from-transparent to-neutral-950" />
         <div className="flex flex-col justify-center items-center lg:items-start top-16 border-neutral-500 lg:border-r-2 lg:border-b-2 lg:h-[90dvh] lg:w-[80dvw] shadow-2xl lg:shadow-black brightness-130">
           <h1 className="flex flex-col text-6xl md:text-7xl leading-18 md:leading-22 text-lime-600 font-black shadow-md font-[Rubik_Glitch] mx-4 lg:ml-20 lg:mr-20 text-center lg:text-start">
@@ -56,7 +56,7 @@ function Hero() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
       <div
         className={`fixed inset-0 z-30 flex items-center justify-center bg-black/90 bg-opacity-80 ${
           isVideoOpen ? "flex" : "hidden"

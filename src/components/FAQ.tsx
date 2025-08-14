@@ -11,7 +11,7 @@ function FAQ() {
   };
 
   return (
-    <div className="flex flex-col place-items-center mt-30 xl:mt-40 sm:mb-30 lg:mb-60">
+    <section className="flex flex-col place-items-center mt-30 xl:mt-40 sm:mb-30 lg:mb-60">
       <div className="mx-4 flex flex-col items-center justify-center">
         <h2 className="text-3xl md:text-5xl text-lime-700 font-bold text-center">
           FAQ
@@ -54,7 +54,7 @@ function FAQ() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

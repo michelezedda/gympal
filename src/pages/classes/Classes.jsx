@@ -20,7 +20,7 @@ function Classes() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto max-w-screen-lg flex flex-col justify-center items-center mt-30 mb-20">
+      <section className="mx-auto max-w-screen-lg flex flex-col justify-center items-center mt-30 mb-20">
         <h1 className="text-lime-600 text-3xl md:text-5xl font-bold mb-10 text-center mx-6">
           WORKOUTS DESIGNED FOR YOU
         </h1>
@@ -33,7 +33,7 @@ function Classes() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
       <OpenStreetMap />
       <Footer />
     </>

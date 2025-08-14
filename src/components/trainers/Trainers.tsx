@@ -32,7 +32,7 @@ function Trainers() {
 
   return (
     <>
-      <div id="trainers" className="container mx-auto max-w-screen-lg">
+      <section id="trainers" className="container mx-auto max-w-screen-lg">
         <div className="flex flex-col place-items-center mt-190 md:mt-80">
           <h2 className="text-3xl md:text-5xl text-lime-600 font-bold mb-10">
             MEET OUR TRAINERS
@@ -69,7 +69,7 @@ function Trainers() {
             />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

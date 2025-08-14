@@ -2,18 +2,22 @@ import { useState } from "react";
 import type { ImperialForm, MetricForm } from "../types/types.tsx";
 
 function BMICalculator() {
+  // State to track selected unit system: "imperial" or "metric"
   const [unit, setUnit] = useState<string>("imperial");
+  // State for storing the imperial form inputs: feet, inches, pounds
   const [imperialForm, setImperialForm] = useState<ImperialForm>({
     feet: "",
     inches: "",
     pounds: "",
   });
+  // State for storing the metric form inputs: centimeters, kilograms
   const [metricForm, setMetricForm] = useState<MetricForm>({
     centimeters: "",
     kilograms: "",
   });
+  // State for storing the calculated BMI value
   const [BMI, setBMI] = useState<number | null>(null);
-
+  // Function to calculate BMI based on selected unit system
   const calculateBMI = () => {
     if (unit === "imperial") {
       const feet = Number(imperialForm.feet);
@@ -40,11 +44,11 @@ function BMICalculator() {
       });
     }
   };
-
+  // Toggle between imperial and metric units
   const handleUnit = () => {
     setUnit(unit === "imperial" ? "metric" : "imperial");
   };
-
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     calculateBMI();
@@ -52,20 +56,24 @@ function BMICalculator() {
 
   return (
     <>
-      <div id="bmi" className="container mx-auto max-w-screen-lg">
+      <section id="bmi" className="container mx-auto max-w-screen-lg">
         <div className="flex flex-col place-items-center mt-34 2xl:mt-40 mx-4">
+          {/* Section title */}
           <h2 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
             CALCULATE YOUR BMI
           </h2>
+          {/* Unit toggle button */}
           <button
             onClick={handleUnit}
             className="hover:bg-lime-600 hover:text-neutral-950 duration-300 active:scale-98 cursor-pointer shadow-black shadow-md py-2 px-4 mt-2 font-semibold bg-neutral-800 w-full mb-2"
           >
+            {/* Conditional rendering based on selected unit */}
             {unit === "imperial"
               ? "CHANGE TO METRIC UNITS"
               : "CHANGE TO US UNITS"}
           </button>
           {unit === "imperial" ? (
+            // Imperial input form
             <form
               className="flex flex-col justify-center gap-2 w-full"
               onSubmit={handleSubmit}
@@ -114,6 +122,7 @@ function BMICalculator() {
               </button>
             </form>
           ) : (
+            // Metric input form
             <form
               className="flex flex-col justify-center gap-2 w-full"
               onSubmit={handleSubmit}
@@ -194,7 +203,7 @@ function BMICalculator() {
             </div>
           ) : null}
         </div>
-      </div>
+      </section>
     </>
   );
 }

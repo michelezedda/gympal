@@ -75,7 +75,7 @@ export default function OpenStreetMap() {
   }, []);
 
   return (
-    <div className="w-full h-96 rounded-md overflow-hidden shadow-lg">
+    <section className="w-full h-96 rounded-md overflow-hidden shadow-lg">
       {loading ? (
         <div className="flex items-center justify-center h-full">
           Loading map...
@@ -99,6 +99,6 @@ export default function OpenStreetMap() {
           <FitBounds locations={locations} />
         </MapContainer>
       )}
-    </div>
+    </section>
   );
 }

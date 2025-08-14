@@ -6,7 +6,7 @@ import type { SingleCardProps } from "../types/types.tsx";
 
 const Cards = () => {
   return (
-    <div className="flex flex-col md:flex-row absolute -bottom-160 md:-bottom-40  inset-x-0 mx-auto gap-4 lg:gap-8 w-max text-black">
+    <section className="flex flex-col md:flex-row absolute -bottom-160 md:-bottom-40  inset-x-0 mx-auto gap-4 lg:gap-8 w-max text-black">
       <Link to={"/classes"}>
         <SingleCard title="DISCOVER OUR CLASSES" Icon={GiGymBag} />
       </Link>
@@ -16,7 +16,7 @@ const Cards = () => {
       <a href="/#bmi">
         <SingleCard title="WANT TO KNOW YOUR BMI?" Icon={FaWeightScale} />
       </a>
-    </div>
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ function Home() {
     scrollToTop();
   }, []);
   return (
-    <>
+    <main>
       {isContactFormOpen && <ContactForm />}
       <Navbar />
       <Hero />
@@ -32,7 +32,7 @@ function Home() {
         <OpenStreetMap />
       </div>
       <Footer />
-    </>
+    </main>
   );
 }
 

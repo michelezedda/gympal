@@ -8,7 +8,7 @@ function Gallery() {
   const [currentPic, setCurrentPic] = useState<number>(0);
 
   return (
-    <div className="container mx-auto max-w-screen-lg">
+    <section className="container mx-auto max-w-screen-lg">
       <div className="flex flex-col place-items-center mt-34 2xl:mt-40">
         <h2 className="text-3xl md:text-5xl text-lime-600 font-bold mb-8">
           TAKE A CLOSER LOOK
@@ -38,15 +38,15 @@ function Gallery() {
                 <IoClose size={40} />
               </button>
               <img
-                src={gallery[currentPic].img}
-                alt={gallery[currentPic].title}
+                src={gallery[currentPic]?.img}
+                alt={gallery[currentPic]?.title}
                 className="max-w-screen max-h-screen md:max-w-[90vh] md:max-h-[90vh]"
               />
             </div>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
 

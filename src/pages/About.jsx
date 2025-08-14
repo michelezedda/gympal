@@ -15,7 +15,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto max-w-screen-lg flex flex-col gap-6 items-center justify-center mt-40 mb-20">
+      <section className="mx-auto max-w-screen-lg flex flex-col gap-6 items-center justify-center mt-40 mb-20">
         <div className="flex flex-col items-center flex-between mx-4">
           <h1 className="text-3xl md:text-5xl font-bold text-lime-600 text-center mb-6">
             A FEW WORDS ABOUT THE CLUB
@@ -54,7 +54,7 @@ function About() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       <OpenStreetMap />
       <Footer />
     </>

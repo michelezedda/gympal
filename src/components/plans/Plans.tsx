@@ -5,7 +5,7 @@ import type { Plan } from "../../types/types.tsx";
 function Plans() {
   return (
     <>
-      <div
+      <section
         id="plans"
         className="relative flex flex-col place-items-center mt-30 xl:mt-40 bg-neutral-700 pt-25 md:pt-55 pb-60 xl:pb-80 -skew-y-10"
       >
@@ -26,7 +26,7 @@ function Plans() {
           alt="train hard pic"
           className="absolute bottom-5 right-5"
         />
-      </div>
+      </section>
     </>
   );
 }
