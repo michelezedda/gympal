@@ -1,11 +1,24 @@
 import { useState } from "react";
 import gallery from "../data/gallery";
 import { IoClose } from "react-icons/io5";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import type { GalleryItem } from "../types/types.tsx";
 
 function Gallery() {
   const [selected, setSelected] = useState<boolean>(false);
   const [currentPic, setCurrentPic] = useState<number>(0);
+
+  const handlePrevious = () => {
+    setCurrentPic((prevPic) =>
+      prevPic === 0 ? gallery.length - 1 : prevPic - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentPic((prevPic) =>
+      prevPic === gallery.length - 1 ? 0 : prevPic + 1
+    );
+  };
 
   return (
     <section className="container mx-auto max-w-screen-lg">
@@ -37,10 +50,20 @@ function Gallery() {
               >
                 <IoClose size={40} />
               </button>
+              <IoIosArrowBack
+                size={30}
+                className="absolute left-3 top-1/2 cursor-pointer hover:scale-150 duration-500"
+                onClick={handlePrevious}
+              />
               <img
                 src={gallery[currentPic]?.img}
                 alt={gallery[currentPic]?.title}
                 className="max-w-screen max-h-screen md:max-w-[90vh] md:max-h-[90vh]"
+              />
+              <IoIosArrowForward
+                size={30}
+                className="absolute right-3 top-1/2 cursor-pointer hover:scale-150 duration-500"
+                onClick={handleNext}
               />
             </div>
           </div>
