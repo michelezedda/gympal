@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
-import OpenStreetMap from "../components/OpenStreetMap";
 
 function About() {
   const { scrollToTop } = useAppContext();
@@ -55,7 +54,6 @@ function About() {
           </div>
         </div>
       </section>
-      <OpenStreetMap />
       <Footer />
     </>
   );

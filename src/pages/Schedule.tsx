@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 import ContactForm from "../components/Modal";
 import type { Days, ScheduleClass } from "../types/types.tsx";
-import OpenStreetMap from "../components/OpenStreetMap";
 
 function Schedule() {
   const days: Days[] = [
@@ -191,7 +190,6 @@ function Schedule() {
           <p>No classes available.</p>
         )}
       </div>
-      <OpenStreetMap />
       <Footer />
     </>
   );
