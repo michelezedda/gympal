@@ -9,7 +9,6 @@ import { useAppContext } from "./context/AppContext";
 import { useEffect } from "react";
 import BMICalculator from "./components/BMICalculator";
 import ContactForm from "./components/ContactForm";
-import OpenStreetMap from "./components/OpenStreetMap";
 
 function Home() {
   const { scrollToTop, isContactFormOpen } = useAppContext();
@@ -28,9 +27,6 @@ function Home() {
       <BMICalculator />
       <Plans />
       <FAQ />
-      <div className="mt-30">
-        <OpenStreetMap />
-      </div>
       <Footer />
     </main>
   );
