@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import OpenStreetMap from "../../components/OpenStreetMap";
 import classes from "../../data/classes";
 import { useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
@@ -34,7 +33,6 @@ function Classes() {
           ))}
         </div>
       </section>
-      <OpenStreetMap />
       <Footer />
     </>
   );
