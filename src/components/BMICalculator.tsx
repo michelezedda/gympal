@@ -82,6 +82,7 @@ function BMICalculator() {
                 type="number"
                 name="feet"
                 placeholder="feet"
+                min="0"
                 value={imperialForm.feet}
                 onChange={(e) =>
                   setImperialForm({ ...imperialForm, feet: e.target.value })
@@ -93,6 +94,7 @@ function BMICalculator() {
                 type="number"
                 name="inches"
                 placeholder="inches"
+                min="0"
                 value={imperialForm.inches}
                 onChange={(e) =>
                   setImperialForm({
@@ -107,6 +109,7 @@ function BMICalculator() {
                 type="number"
                 name="pounds"
                 placeholder="pounds"
+                min="0"
                 value={imperialForm.pounds}
                 onChange={(e) =>
                   setImperialForm({
@@ -131,6 +134,7 @@ function BMICalculator() {
                 type="number"
                 name="centimeters"
                 placeholder="centimeters"
+                min="0"
                 value={metricForm.centimeters}
                 onChange={(e) =>
                   setMetricForm({ ...metricForm, centimeters: e.target.value })
@@ -142,6 +146,7 @@ function BMICalculator() {
                 type="number"
                 name="kilograms"
                 placeholder="kilograms"
+                min="0"
                 value={metricForm.kilograms}
                 onChange={(e) =>
                   setMetricForm({
