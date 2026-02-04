@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import trainers from "../data/trainers";
 import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/Modal";
 import type { Days, ScheduleClass } from "../types/types.tsx";
 import OpenStreetMap from "../components/OpenStreetMap";
 

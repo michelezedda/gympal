@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ContactForm from "../../components/ContactForm";
+import ContactForm from "../../components/Modal";
 import { useAppContext } from "../../context/AppContext";
 import type { ClassCardProps } from "../../types/types.tsx";
 

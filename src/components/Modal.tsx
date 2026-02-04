@@ -3,10 +3,11 @@ import { useAppContext } from "../context/AppContext";
 import { IoMdClose } from "react-icons/io";
 import plans from "../data/plans";
 import classes from "../data/classes";
-import type { FormData, Plan, Class, Location } from "../types/types.tsx";
+import type { FormData, Plan, Class, Location } from "../types/types";
 import locations from "../data/locations";
+import ReactDom from "react-dom";
 
-function ContactForm() {
+function Modal() {
   const [completed, setCompleted] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -25,7 +26,7 @@ function ContactForm() {
     setCompleted(true);
   };
 
-  return (
+  return ReactDom.createPortal(
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/80">
         <div
@@ -168,8 +169,9 @@ function ContactForm() {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.getElementById("portal"),
   );
 }
 
-export default ContactForm;
+export default Modal;
